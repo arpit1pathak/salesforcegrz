@@ -1,0 +1,10 @@
+<apex:page standardController="Position__c">
+    <apex:pageBlock title="Position Page">
+        <apex:pageBlockSection title="Position detail" collapsible="tru">
+            Position Name: {!Position__c.name}<br/>
+            Position Status: {!Position__c.Status__c}<br/>
+            Position Salary:{!Position__c.MaxPay__c}<br/>
+            Position StartDate:{!Position__c.Start_Date__c}<br/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,13 @@
+<apex:page controller="Addcustomer">
+    <apex:form >
+    <apex:pageblock title="Create Order">
+        <apex:pageBlockSection title="Add Order" collapsible="false">
+       Product 1: <apex:inputText value="{!prodname}"/>
+           Quantity : <apex:inputText value="{!prodbrand}"/>
+               Total Price: <apex:inputText value="{!prodprice}"/> 
+            <apex:commandButton value="Save" action="{!Save1}"/>
+            <apex:commandButton value="Cancel" action="{!Cancel}"/>
+                       </apex:pageBlockSection>
+    </apex:pageblock>
+    </apex:form>
+</apex:page>

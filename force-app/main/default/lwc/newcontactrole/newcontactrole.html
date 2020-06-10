@@ -1,0 +1,39 @@
+<template>
+  <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_small" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+      <div class="slds-modal__container">
+      <header class="slds-modal__header">
+      <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hidemodal}>
+        <lightning-icon class="slds-icon--large slds-icon-text-light" variant="inverse" icon-name="utility:close" alternative-text="Approved" style="fill:bisque"></lightning-icon>
+      <span class="slds-assistive-text">Close</span>
+      </button>
+      <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">New Contact Role</h2>
+      </header>
+      <div class="slds-modal__content slds-float_right slds-size_12-of-12  slds-p-around_medium slds-scrollable_none " style="height:110px;" id="modal-content-id-1">
+        <div class="slds-grid ">
+        <div class="slds-col slds-size_5-of-12">
+        <c-lookup searchtext={conname} oncontactid={handlecontactid}></c-lookup>
+      </div>
+      <div class="slds-col slds-size_4-of-12">
+        <lightning-combobox
+        label="Role"
+        value={role}
+        placeholder="Select Role"
+        options={options}
+        onchange={handleChange} style="padding-left: 5px;margin-left: -57px;margin-right: 67px;overflow:initial" ></lightning-combobox>
+      </div>
+        
+          <div class="slds-col slds-size_4-of-12" >
+            <span class="slds-align_absolute-center">
+          <lightning-input type="checkbox" onchange={gtoggles} label="Is Primary" checked={isprimary} style="margin-top:26px;margin-left:-165px;"> </lightning-input>
+        </span>
+        </div>
+      </div>
+      </div>
+      <footer class="slds-modal__footer">
+      <button class="slds-button slds-button_neutral" onclick={cancel}>Cancel</button>
+      <button class="slds-button slds-button_brand" onclick={save}>Save</button>
+      </footer>
+      </div>
+      </section>
+      <div class="slds-backdrop slds-backdrop_open"></div>
+</template>

@@ -1,0 +1,45 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,lightning:actionOverride"   access="global" controller="accountpopup" >
+    <aura:attribute name="showpopup" type="Boolean" default="true"/>
+    <aura:attribute name="searchText" type="string"/>
+    <aura:attribute name="returnedname" type="list"/>
+    <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Search Account</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="combobox-id-1">Relate to</label>
+                    <div class="slds-form-element__control">
+                        <div class="slds-combobox_container">
+                            <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                                <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                                    <lightning:input value="{!v.searchText}" type="search" onkeyup="{!c.search}"/>                     
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+                <aura:if isTrue="{!v.returnedname.length>0}">
+                    <aura:iteration items="{!v.returnedname}" var="item">
+                        <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                            <li role="presentation" class="slds-listbox__item">
+                                <a class= "slds-text-color--default" href="{!'/lightning/r/Account/' + item.Id + '/view'}" target="_blank" > {!item.Name}</a>
+                            </li>
+                        </ul>
+                    </aura:iteration> 
+                    
+                </aura:if>
+            </div>
+            <footer class="slds-modal__footer">
+                <button class="slds-button slds-button_neutral" onclick="{!c.cancel}">Cancel</button>
+                <lightning:navigation aura:id="navService"/>     
+                <button class="slds-button slds-button_brand" onclick="{!c.createnew}">Create New</button>
+            </footer>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+</aura:component>

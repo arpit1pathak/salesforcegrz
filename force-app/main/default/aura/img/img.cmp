@@ -1,0 +1,7 @@
+<aura:component >
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+   <aura:attribute name="backgroundImageURL" type="String" default="" />
+    <div style="{!'background: url(' + v.backgroundImageURL +');'}">
+    
+    </div>
+</aura:component>

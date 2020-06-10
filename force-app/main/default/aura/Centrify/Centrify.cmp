@@ -1,0 +1,801 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+   <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+   <aura:attribute name="backgroundImageURL" type="String" default="" />
+   <aura:attribute name="backgroundImagesolution" type="String" default="" />
+   <aura:attribute name="backgroundImageannouncement" type="String" default="" />
+   <aura:attribute name="backgroundImageknowledge" type="String" default="" />
+   <aura:attribute name="backgroundImagecarousel" type="String" default="" />
+   <div class="slds-grid slds-wrap page">
+      <ui:scrollerWrapper class="scrollersize">
+         <div class="slds-col slds-small-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_12-of-12 header" style="">
+            <div class="slds-grid">
+               <div class="slds-col  slds-small-size_8-of-12 slds-medium-size_4-of-12 slds-large-size_3-of-12">
+                  <lightning:icon class="slds-button menuleft" iconName="utility:rows" variant="bare" />
+                  <img class="centrify " src="{!$Resource.Centrify}" />
+               </div>
+               <div class="slds-col slds-small-size_4-of-12 slds-medium-size_8-of-12 slds-large-size_9-of-12 rightdiv">
+                  <lightning:icon class="slds-button menuright slds-float_right" iconName="utility:rows" variant="bare" />
+                  <lightning:button class="login" variant="brand" label="LOGIN" />
+                  <div class="slds-col slds-m-left_xx-large slds-is-static slds-p-vertical_x-small slds-p-vertical_xx-small slds-p-vertical_xxx-small slds-p-vertical_small slds-p-vertical_medium slds-p-vertical_large slds-p-vertical_x-large hide">
+                     <ul class="horizontalnav">
+                        <li><a href="#home font">Support</a></li>
+                        <li><a href="#news font">Contact</a></li>
+                        <li>
+                           <lightning:button class="lilogin" variant="brand" label="LOGIN" />
+                        </li>
+                        <li style="margin-top:-32px;">
+                           <lightning:icon class="slds-button message" iconName="custom:custom105" variant="bare" />
+                        </li>
+                        <li style="margin-top: -9px;">
+                           <button class="slds-button slds-button_destructive">TRY IT NOW</button>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class=" slds-col slds-is-static slds-m-left_xx-large slds-p-vertical_x-small slds-p-vertical_xx-small slds-p-vertical_xxx-small slds-p-vertical_small slds-p-vertical_medium slds-p-vertical_x-large slds-p-vertical_large slds-size_12-of-12 hide">
+                     <ul class="slds-list_horizontal horizontalnav2">
+                        <li><a style="margin-left:0%" href="#home font">Why Centrify</a></li>
+                        <li><a href="#news font">Products</a></li>
+                        <li><a href="#news font">Solutions</a></li>
+                        <li><a href="#news font">Customers</a></li>
+                        <li><a href="#news font">Partners</a></li>
+                        <li><a href="#news font">Company</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="slds-col slds-size_1-of-12 leftpaneldiv">
+               <div class="icons home">
+                  <a><img src="{!$Resource.Homeicon}" /></a>
+                  <p class="iconstext">Home</p>
+               </div>
+               <div class="icons color">
+                  <a><img src="{!$Resource.forumsicon}" /></a>
+                  <p class="iconstext">Forums</p>
+               </div>
+               <div class="icons color">
+                  <a><img src="{!$Resource.ideaexchange}" /></a>
+                  <p class="iconstext">Idea Exchange</p>
+               </div>
+               <div class="icons color">
+                  <a><img src="{!$Resource.knowledgebase}" /></a>
+                  <p class="iconstext">Knowledge Base</p>
+               </div>
+               <div class="icons color">
+                  <a><img src="{!$Resource.Events}" /></a>
+                  <p class="iconstext">Events</p>
+               </div>
+               <div class="icons color">
+                  <a><img src="{!$Resource.Videos}" /></a>
+                  <p class="iconstext">Videos</p>
+               </div>
+            </div>
+            <div class="slds-col slds-small-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_12-of-12 backgroundimagediv" style="{!'background: url(' + v.backgroundImageURL +') no-repeat;'}">
+               <div class="slds-grid slds-wrap">
+                  <div class="slds-col welcometext slds-m-top_small slds-small-size--2-of-12 slds-medium-size--5-of-12 slds-large-size--4-of-12 slds-m-top_xx-large slds-align_absolute-center">
+                     <span>WELCOME TO CENTRIFY ZERO TRUST PRIVILEGE SERVICES</span>
+                  </div>
+                  <div class="slds-col slds-small-size--10-of-12 slds-medium-size--10-of-12 slds-large-size--10-of-12  subtext slds-align_absolute-center">
+                     <span>ZERO TRUST PRIVILEGE MEANS ZERO TOLERANCE FOR PRIVILEGED ACCESS ABUSE</span>
+                  </div>
+                  <div class="slds-col slds-size_12-of-12">
+                     <div class="slds-grid slds-wrap slds-align_absolute-center">
+                        <div class="slds-col slds-small-size--10-of-12 slds-medium-size--9-of-12 slds-large-size--8-of-12 true">
+                           <div class="slds-grid slds-wrap slds-align_absolute-center">
+                              <div class="searchgrid slds-max-small-size--8-of-12 slds-small-size--9-of-12 slds-medium-size--9-of-12 slds-large-size--9-of-12">
+                                 <span>
+                                 <input class="search input uiInput uiInputText uiInput--default uiInput--input" type="text" aria-describedby="" placeholder="Type your question here..."/>
+                                 </span>
+                              </div>
+                              <div class=" slds-max-small-size--4-of-12 slds-max-small-size--12-of-12 slds-small-size--2-of-12 slds-medium-size--2-of-12 slds-large-size--1-of-12 searchDivSize">
+                                 <lightning:icon class="themecolor slds-icon-utility-search slds-icon_container" iconName="utility:search" variant="bare" />
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+               <div class="slds-col slds-size_12-of-12 textstyl">
+                  <span data-aura-rendered-by="750:0">
+                  <a class="textstyl">Welcome to the Centrify Community!</a>
+                  <a class="textstyl"> New to the Community?</a><a class="textstyl">&nbsp;Start Here</a></span>
+               </div>
+            </div>
+            <div class="slds-grid slds-wrap initialinformation">
+               <div class="slds-col slds-size_12-of-12 lightgraybackground paddingleftright paddingtopbottom fonFaimly">
+                  <div class="slds-grid slds-wrap centercontent">
+                     <div class="slds-col slds-small-size--12-of-12 slds-medium-size--12-of-12 slds-large-size--3-of-12 paddaround10 blockwidth">
+                        <div class="tiles">
+                           <div class="slds-grid slds-wrap">
+                              <div class="slds-col slds-size_12-of-12 slds-text-align_center whitebackground bordergrayaround paddingaround30">
+                                 <div class="slds-col paddbottom5 solutionsimage" style="{!'background: url(' + v.backgroundImagesolution +') no-repeat 0 0;'}"></div>
+                                 <div class="slds-col paddbottom5 font18 slds-text-title_bold paddingtop15">
+                                    <span>Solutions</span>
+                                 </div>
+                                 <div class="slds-col paddBottom5 font16 line_Heght"><span></span>
+                                 </div>
+                                 <div class="slds-col">
+                                    <a class="custombutton">Learn More</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slds-col slds-small-size--12-of-12 slds-medium-size--12-of-12 slds-large-size--3-of-12 paddaround10 blockwidth">
+                        <div class="tiles">
+                           <div class="slds-grid slds-wrap">
+                              <div class="slds-col slds-size_12-of-12 slds-text-align_center whitebackground bordergrayaround paddingaround30">
+                                 <div class="slds-col paddbottom5 solutionsimage" style="{!'background: url(' + v.backgroundImageannouncement +') no-repeat 0 0;'}"></div>
+                                 <div class="slds-col paddbottom5 font18 slds-text-title_bold paddingtop15">
+                                    <span>Announcements</span>
+                                 </div>
+                                 <div class="slds-col paddBottom5 font16 line_Heght"><span></span>
+                                 </div>
+                                 <div class="slds-col">
+                                    <a class="custombutton">See More</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slds-col slds-small-size--12-of-12 slds-medium-size--12-of-12 slds-large-size--3-of-12 paddaround10 blockwidth">
+                        <div class="tiles">
+                           <div class="slds-grid slds-wrap">
+                              <div class="slds-col slds-size_12-of-12 slds-text-align_center whitebackground bordergrayaround paddingaround30">
+                                 <div class="slds-col paddbottom5 solutionsimage" style="{!'background: url(' + v.backgroundImageknowledge +') no-repeat 0 0;'}"></div>
+                                 <div class="slds-col paddbottom5 font18 slds-text-title_bold paddingtop15">
+                                    <span>Knowledge Base</span>
+                                 </div>
+                                 <div class="slds-col paddBottom5 font16 line_Heght"><span></span>
+                                 </div>
+                                 <div class="slds-col">
+                                    <a class="custombutton">Learn More</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="slds-col slds-size--12-of-12 paddingmaindiv">
+               <div class="ccentrify_postleaderboard">
+                  <div class="slds-grid slds-wrap">
+                     <div class="slds-col slds-large-size--8-of-12">
+                        <div class="ui-widget">
+                           <div class="latestpost ccentify_latestfeed_component">
+                              <div>
+                                 <div class="spacing header1 divborder">Latest Posts</div>
+                              </div>
+                              <div>
+                                 <div class="slds-grid slds-wrap">
+                                    <div class="slds-col slds-size--3-of-12 slds-small-size--2-of-12 slds-large-size--1-of-12">
+                                       <div class="feedicons">
+                                          <div class="slds-align_absolute-center">
+                                             <img src="{!$Resource.discussion}" class="image" />
+                                          </div>
+                                       </div>
+                                    </div>
+                                     <div class="slds-grid slds-wrap divborder">
+                                    <div class="slds-col slds-size--9-of-12 slds-small-size--10-of-12 slds-medium-size--10-of-12 slds-large-size--11-of-12">
+                                       <span class="heading">
+                                       <a>What's new with Centrify Products</a>
+                                       </span>
+                                       <div style="padding: 5px 0px;">
+                                          <div class="subheading">
+                                             What an exciting couple of weeks for us here at Centrify. Our Centrify Zero Trust Privilege Services (previously known as Infrastructure Services) 19.6 and Centrify Privileged Access Service 1 ...
+                                          </div>
+                                       </div>
+                                       <div class="slds-col slds-size_12-of-12" style="padding:5px 0px;">
+                                          <span class="pdetails">
+                                          <span>
+                                          <a class="userinfospacing" >
+                                          <img class="smallicons" src="{!$Resource.profile}"/> 
+                                          &nbsp;
+                                          <span>srilata</span>
+                                          </a>
+                                          </span>
+                                          </span>
+                                          <span class="pdetails">
+                                          <span>
+                                          <img class="commentno" src="{!$Resource.calendar}"/>
+                                          </span> &nbsp;
+                                          <span>Sep 12,2019</span>
+                                          </span>
+                                          <span class="pdetails">
+                                          <span>
+                                          <img class="commentno" src="{!$Resource.reply}"/>
+                                          </span> &nbsp;
+                                          </span>
+                                          <span>2</span>
+                                       </div>
+                                    </div>
+                                     </div>
+                                 </div>
+                              </div>
+                              <div>
+                                 <div class="slds-grid slds-wrap divborder">
+                                    <div class="slds-col slds-size--3-of-12 slds-small-size--2-of-12 slds-medium-size--2-of-12 slds-large-size--1-of-12">
+                                       <div class="feedicons">
+                                          <div class="slds-align_absolute-center">
+                                             <img src="{!$Resource.discussion}" class="image" />
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="slds-col slds-size--9-of-12 slds-small-size--10-of-12 slds-medium-size--10-of-12 slds-large-size--11-of-12">
+                                       <span class="heading">
+                                       <a>Announcing Availability of Centrify Zero Trust Privilege Services 19.9</a>
+                                       </span>
+                                       <div style="padding:5px 0px">
+                                          <div class="subheading">
+                                             Centrify is pleased to announce the general availability of Centrify Zero Trust Privilege Services: Authentication Service, Privilege Elevation Service, Auditing and Monitoring Service version 19.9. ...
+                                          </div>
+                                       </div>
+                                       <div class="slds-col slds-size_12-of-12" style="padding:5px 0px">
+                                          <span class="pdetails">
+                                          <span>
+                                          <a class="userinfospacing" >
+                                          <img class="smallicons" src="{!$Resource.profile}"/> 
+                                          &nbsp;
+                                          <span>cjones</span>
+                                          </a>
+                                          </span>
+                                          </span>
+                                          <span class="pdetails">
+                                          <span>
+                                          <img class="commentno" src="{!$Resource.calendar}"/>
+                                          </span> &nbsp;
+                                          <span>Dec 19,2019</span>
+                                          </span>
+                                          <span class="pdetails">
+                                          <span>
+                                          <img class="commentno" src="{!$Resource.reply}"/>
+                                          </span> &nbsp;
+                                          </span>
+                                          <span>1</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div>
+                                 <div class="slds-grid slds-wrap divborder">
+                                    <div class="slds-col slds-size--3-of-12 slds-small-size--2-of-12 slds-medium-size--2-of-12 slds-large-size--1-of-12">
+                                       <div class="feedicons">
+                                          <div class="slds-align_absolute-center">
+                                             <img src="{!$Resource.discussion}" class="image" />
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="slds-col slds-size--9-of-12 slds-small-size--10-of-12 slds-medium-size--10-of-12 slds-large-size--11-of-12">
+                                       <span class="heading">
+                                       <a>Trouble with file permissions on samba share.. file creation mask,etc.</a>
+                                       </span>
+                                       <div style="padding:5px 0px">
+                                          <div class="subheading">
+                                             I'll do my best to explain this. Let me know if any other information is needed. This is my smb.conf file: [global] security = ADS realm = child.root.pri workgroup = CHILD n ...
+                                          </div>
+                                       </div>
+                                       <div class="slds-col slds-size_12-of-12" style="padding:5px 0px">
+                                          <span class="pdetails">
+                                          <span>
+                                          <a class="userinfospacing" >
+                                          <img class="smallicons" src="{!$Resource.profile}"/> 
+                                          &nbsp;
+                                          <span>aande</span>
+                                          </a>
+                                          </span>
+                                          </span>
+                                          <span class="pdetails">
+                                          <span>
+                                          <img class="commentno" src="{!$Resource.calendar}"/>
+                                          </span> &nbsp;
+                                          <span>July 28,2011</span>
+                                          </span>
+                                          <span class="pdetails">
+                                          <span>
+                                          <img class="commentno" src="{!$Resource.reply}"/>
+                                          </span> &nbsp;
+                                          </span>
+                                          <span>7</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="slds-grid slds-wrap divborder">
+                                    <div class="slds-col slds-size--3-of-12 slds-small-size--2-of-12 slds-medium-size--2-of-12 slds-large-size--1-of-12">
+                                       <div class="feedicons">
+                                          <div class="slds-align_absolute-center">
+                                             <img src="{!$Resource.discussion}" class="image" />
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="slds-col slds-size--9-of-12 slds-small-size--10-of-12 slds-medium-size--10-of-12 slds-large-size--11-of-12">
+                                       <span class="heading">
+                                       <a>SSO now working in Office apps</a>
+                                       </span>
+                                       <div style="padding:5px 0px">
+                                          <div class="subheading">
+                                             Until now our SSO for Office 365 has been working perfectly but noticed an odd issue that's appeared in the last week or so: When on a domain PC Microsoft Office detects that we're running...
+                                          </div>
+                                       </div>
+                                       <div class="slds-col slds-size_12-of-12" style="padding:5px 0px">
+                                          <span class="pdetails">
+                                          <span>
+                                          <a class="userinfospacing" >
+                                          <img class="smallicons" src="{!$Resource.profile}"/> 
+                                          &nbsp;
+                                          <span>gshaw</span>
+                                          </a>
+                                          </span>
+                                          </span>
+                                          <span class="pdetails">
+                                          <span>
+                                          <img class="commentno" src="{!$Resource.calendar}"/>
+                                          </span> &nbsp;
+                                          <span>Apr 13,2015</span>
+                                          </span>
+                                          <span class="pdetails">
+                                          <span>
+                                          <img class="commentno" src="{!$Resource.reply}"/>
+                                          </span> &nbsp;
+                                          </span>
+                                          <span>7</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slds-col slds-large-size--4-of-12">
+                        <div class="ccentrify_leaderboardcomponent">
+                           <lightning:layout multipleRows="true">
+                              <lightning:layoutItem padding="around-small" size="12">
+                                 <div class="page-section page-header">
+                                    <div class="ccentrify_leaderboardcomponent">
+                                       <div>
+                                          <div class="ui-widget">
+                                             <div class="forcecommunityreputationleaderboard42">
+                                                <div>
+                                                   <h2 class="slds-text-heading--small slds-p-bottom--xx-small slds-float_left leaderboardheading">LeaderBoard</h2>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </lightning:layoutItem>
+                              <lightning:layoutItem size="12" class="mar">
+                                 <div class="page-section page-right slds-has-bottom-magnet">
+                                    <ul class="clear">
+                                       <li>
+                                          <div class="leaderboardrowwrapper slds-text-body_small slds-p-top_x-small slds-p-bottom_x-small slds-grid slds-wrap">
+                                             <div class="slds-align-middle slds-size_4-of-8 slds-medium-size_7-of-12 slds-large-size_8-of-12">
+                                                <div class="slds-media">
+                                                   <div class="slds-media__figure">
+                                                      <img src="{!$Resource.profile}" class="slds-avatar slds-avatar_large slds-avatar_circle" />
+                                                   </div>
+                                                   <div class="slds-media__body">
+                                                      <div class="levelandpointscol slds-p-left_small slds-align-middle">
+                                                         <a class="comm-leaderboard__user-name">robertson.pimentel</a>
+                                                      </div>
+                                                      <div class="slds-p-top_xx-small">
+                                                         <span class="comm-leaderboard__level-name">Guru II</span>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="comm-leaderboard__points-column slds-text-align_center slds-align-middle slds-size_3-of-8 slds-medium-size_4-of-12 slds-large-size_3-of-12">
+                                                <div class="comm-leaderboard__points slds-text-heading_small">4676</div>
+                                                <div class="comm-leaderboard__points-word">Points</div>
+                                             </div>
+                                          </div>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </lightning:layoutItem>
+                              <lightning:layoutItem size="12">
+                                 <div class="page-section page-right slds-has-bottom-magnet">
+                                    <ul class="clear">
+                                       <li>
+                                          <div class=" leaderboardrowwrapper slds-text-body_small slds-p-top_x-small slds-p-bottom_x-small slds-grid slds-wrap">
+                                             <div class="slds-align-middle slds-size_4-of-8 slds-medium-size_7-of-12 slds-large-size_8-of-12">
+                                                <div class="slds-media">
+                                                   <div class="slds-media__figure">
+                                                      <img src="{!$Resource.profile}" class="slds-avatar slds-avatar_large slds-avatar_circle" />
+                                                   </div>
+                                                   <div class="slds-media__body">
+                                                      <div class="levelandpointscol slds-p-left_small slds-align-middle">
+                                                         <a class="comm-leaderboard__user-name">TonyC</a>
+                                                      </div>
+                                                      <div class="slds-p-top_xx-small">
+                                                         <span class="comm-leaderboard__level-name">Master ||</span>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="comm-leaderboard__points-column slds-text-align_center slds-align-middle slds-size_3-of-8 slds-medium-size_4-of-12 slds-large-size_3-of-12">
+                                                <div class="comm-leaderboard__points slds-text-heading_small">5243</div>
+                                                <div class="comm-leaderboard__points-word">Points</div>
+                                             </div>
+                                          </div>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </lightning:layoutItem>
+                              <lightning:layoutItem size="12">
+                                 <div class="page-section page-right slds-has-bottom-magnet">
+                                    <ul class="clear">
+                                       <li>
+                                          <div class=" leaderboardrowwrapper slds-text-body_small slds-p-top_x-small slds-p-bottom_x-small slds-grid slds-wrap">
+                                             <div class="slds-align-middle slds-size_4-of-8 slds-medium-size_7-of-12 slds-large-size_8-of-12">
+                                                <div class="slds-media">
+                                                   <div class="slds-media__figure">
+                                                      <img src="{!$Resource.profile}" class="slds-avatar slds-avatar_large slds-avatar_circle" />
+                                                   </div>
+                                                   <div class="slds-media__body">
+                                                      <div class="levelandpointscol slds-p-left_small slds-align-middle">
+                                                         <a class="comm-leaderboard__user-name">ilau</a>
+                                                      </div>
+                                                      <div class="slds-p-top_xx-small">
+                                                         <span class="comm-leaderboard__level-name">Master |</span>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="comm-leaderboard__points-column slds-text-align_center slds-align-middle slds-size_3-of-8 slds-medium-size_4-of-12 slds-large-size_3-of-12">
+                                                <div class="comm-leaderboard__points slds-text-heading_small">25325</div>
+                                                <div class="comm-leaderboard__points-word">Points</div>
+                                             </div>
+                                          </div>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </lightning:layoutItem>
+                              <lightning:layoutItem size="12">
+                                 <div class="page-section page-right slds-has-bottom-magnet">
+                                    <ul class="clear">
+                                       <li>
+                                          <div class=" leaderboardrowwrapper slds-text-body_small slds-p-top_x-small slds-p-bottom_x-small slds-grid slds-wrap">
+                                             <div class="slds-align-middle slds-size_4-of-8 slds-medium-size_7-of-12 slds-large-size_8-of-12">
+                                                <div class="slds-media">
+                                                   <div class="slds-media__figure">
+                                                      <img src="{!$Resource.profile}" class="slds-avatar slds-avatar_large slds-avatar_circle" />
+                                                   </div>
+                                                   <div class="slds-media__body">
+                                                      <div class="levelandpointscol slds-p-left_small slds-align-middle">
+                                                         <a class="comm-leaderboard__user-name">SAnn 2</a>
+                                                      </div>
+                                                      <div class="slds-p-top_xx-small">
+                                                         <span class="comm-leaderboard__level-name">Master |</span>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="comm-leaderboard__points-column slds-text-align_center slds-align-middle slds-size_3-of-8 slds-medium-size_4-of-12 slds-large-size_3-of-12">
+                                                <div class="comm-leaderboard__points slds-text-heading_small">2341</div>
+                                                <div class="comm-leaderboard__points-word">Points</div>
+                                             </div>
+                                          </div>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </lightning:layoutItem>
+                              <lightning:layoutItem size="12">
+                                 <div class="page-section page-right slds-has-bottom-magnet">
+                                    <ul class="clear">
+                                       <li>
+                                          <div class=" leaderboardrowwrapper btm slds-text-body_small slds-p-top_x-small slds-p-bottom_x-small slds-grid slds-wrap">
+                                             <div class="slds-align-middle slds-size_4-of-8 slds-medium-size_7-of-12 slds-large-size_8-of-12">
+                                                <div class="slds-media">
+                                                   <div class="slds-media__figure">
+                                                      <img src="{!$Resource.profile}" class="slds-avatar slds-avatar_large slds-avatar_circle" />
+                                                   </div>
+                                                   <div class="slds-media__body">
+                                                      <div class="levelandpointscol slds-p-left_small slds-align-middle">
+                                                         <a class="comm-leaderboard__user-name">DMcNe</a>
+                                                      </div>
+                                                      <div class="slds-p-top_xx-small">
+                                                         <span class="comm-leaderboard__level-name">Advisor |||</span>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="comm-leaderboard__points-column slds-text-align_center slds-align-middle slds-size_3-of-8 slds-medium-size_4-of-12 slds-large-size_3-of-12">
+                                                <div class="comm-leaderboard__points slds-text-heading_small">1263</div>
+                                                <div class="comm-leaderboard__points-word">Points</div>
+                                             </div>
+                                          </div>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </lightning:layoutItem>
+                           </lightning:layout>
+                        </div>
+                        <div class="ui-widget">
+                           <div class="forcecommunityrichtext">
+                              <div style="padding:30px 0px;width:100%;margin-left:10px;">
+                                 <div style="padding:10px;border:1px solid #cccccc;border-radius:4px;">
+                                    <div style="border-bottom:.2px solid #cccccc;" class="slds-grid">
+                                       <div style="margin-right:10px;padding:5px 0px 5px 0px;" class="slds-col">
+                                          <div style="font-family:'Muli';font-size:23px;color:#212121;font-weight:bold;">
+                                             Featured Content
+                                          </div>
+                                          <div style="color:#959ba1;font-family:'Muli';font-size: 17px;word-break: break-word;">
+                                             Get the latest update, start a discussion and share your favorite technical tips with our community experts and peers.
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div style="border-bottom:.2px solid #cccccc;padding:10px 0px 10px 0px">
+                                       <ul style="font-family:Muli,sans-serif;padding:10px 0px 10px 0px;list-style-type:disc;">
+                                          <li style="color:#ae0000;margin-left:15px;">
+                                             <a><span style="color:#007dc1;font-size:15px;padding-left:5px;">Community News &#38; Announcements</span></a>
+                                          </li>
+                                          <li style="color:#ae0000;margin-left:15px;">
+                                             <a><span style="color:#007dc1;font-size:15px;padding-left:5px;">Centrify Authentication Service</span></a>
+                                          </li>
+                                          <li style="color:#ae0000;margin-left:15px;">
+                                             <a><span style="color:#007dc1;font-size:15px;padding-left:5px;">Centrify Privilege Service</span></a>
+                                          </li>
+                                          <li style="color:#ae0000;margin-left:15px;">
+                                             <a><span style="color:#007dc1;font-size:15px;padding-left:5px;">Centrify Express</span></a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                    <div style="padding:10px;">
+                                       <div style="font-family:'Muli'; font-size: 18px; color: #ae0000;" align="center">
+                                          <a style="color: #ae0000;">View More</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div style="padding: 25px 0px 60px 0px;" ></div>
+                  </div>
+               </div>
+            </div>
+            <div class="ui-widget">
+               <div class="slideshow-container">
+                  <div class="slds-col slds-max-small-size--1-of-1 slds-small-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1" style="position:relative;">
+                     <div class="slds-col slds-brand-band_cover" style="{!'background: url(' + v.backgroundImagecarousel +');height: 420px;width: 99.7%;    margin-left: 4px;'}">
+                        <div class="slideshow-container">
+                           <div class="mySlides fade  thing active slds-col slds-max-small-size--1-of-1 slds-small-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1">
+                              <div class="slds-col slds-max-small-size--1-of-1 slds-small-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1 containertext bg1">
+                                 <div class="slds-col slds-max-small-size--1-of-1 slds-small-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1 titletext"></div>
+                                 <div class="slds-col slds-max-small-size--1-of-1 slds-small-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--4-of-12 titlehead">SEE HOW MUCH MORE VALUE YOU COULD BE GETTING FROM CENTRIFY</div>
+                              </div>
+                              <div class="slds-col slds-max-small-size--1-of-1 slds-small-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1 carousel_btn_div titlehead">
+                                 <a class="slds-button slds-button_destructive learn_btn">Learn More</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slds-col slds-max-small-size--1-of-1 slds-small-size-1--of-1 slds-medium-size-1--of-1 slds-large-size-1--of-1 dotsdiv titlehead" style="text-align:center;">
+                        <span class="dot activedot"></span>
+                        <span class="dot"></span>   
+                        <span class="dot"></span>  
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="slds-grid slds-wrap ccentrify_events">
+               <div class="slds-col slds-size_12-of-12 lightgraybackground fonfamily bgsize">
+                  <div class="slds-col slds-size-12-of-12 lightgraybackground paddingleftright fonfamily slds-m-top--x-large slds-m-bottom--x-small">
+                     <div class="Heading">CENTRIFY EVENTS</div>
+                     <div class="sbheading">Upcoming Tradeshows, Speaking</div>
+                     <div class="sbheading">Engagements, Product Demos and Webinars</div>
+                  </div>
+                  <div class="slds-col slds-size_9-of-12 margin">
+                     <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size--12-of-12">
+                           <div class="slds-col slds-max-small-size--1-of-1 slds-small-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1 caraousel_btn_div slds-align_absolute-center">
+                              <a class="slds-button slds-button_destructive learn_btn">See All Events</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div style="padding: 25px 0px 100px 0px;" ></div>
+               <div style="padding: 25px 0px 100px 0px;" ></div>
+               <div style="padding: 25px 0px 100px 0px;" ></div>
+               <div class="slds-col slds-size--12-of-12 paddingmaindiv tourbox">
+                  <div class="slds-grid slds-wrap">
+                     <div class="slds-col slds-small-size--12-of-12 slds-medium-size--12-of-12 slds-large-size--4-of-12">
+                        <div class="ui-widget">
+                           <div class="forcecommunityrichtext forcecommunityhtmlblock">
+                              <div class="uioutputrichtext">
+                                 <div class="topcontainer">
+                                    <div style="padding:10px 0px 10px 0px">
+                                       <div style="color:#ae0000;font-weight:bold;font-size:14px;font-family:'Muli';padding:0px 0px 10px 0px">
+                                          CENTRIFY ZERO TRUST PREVILIGE
+                                       </div>
+                                       <span>
+                                       <iframe src="https://www.youtube.com/embed/2PspA47rDcw" height="300px" frameborder="0" width="100%">
+                                       </iframe>  
+                                       </span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slds-col slds-small-size--12-of-12 slds-medium-size--12-of-12 slds-large-size--3-of-12">
+                        <div class="ui-widget">
+                           <div class="forcecommunityrichtext forcecommunityhtmlblock">
+                              <div class="techcenter">
+                                 <div style="font-size:14px;font-weight:bold;color:#ae0000;padding:10px 0px 10px 0px;font-family:'Muli',sans-serif;">
+                                    TECH CENTER
+                                 </div>
+                                 <div class="width" style="font-family:Muli;font-size:18px;border-radius:4px;border:.5px solid rgba(0,0,0,0.1);box-shadow:0 0 30px 0 rgba(0,0,0,0.1);">
+                                    <div style="padding:10px 0px 30px 0px">
+                                       <ul>
+                                          <li style="color:#0290b1;padding:8px;list-style-type:disc;margin-left:25px;">
+                                             <a><span style="color:#212121; font-siz:27px;">Docker TechCenter</span></a>
+                                          </li>
+                                          <li style="color:#0290b1;padding:8px;list-style-type:disc;margin-left:25px;">
+                                             <a><span style="color:#212121; font-siz:27px;">Palo Alto Networks TechCenter</span></a>
+                                          </li>
+                                          <li style="color:#0290b1;padding:8px;list-style-type:disc;margin-left:25px;">
+                                             <a><span style="color:#212121; font-siz:27px;">Google Cloud TechCenter</span></a>
+                                          </li>
+                                          <li style="color:#0290b1;padding:8px;list-style-type:disc;margin-left:25px;">
+                                             <a><span style="color:#212121; font-siz:27px;">ServiceNow TechCenter</span></a>
+                                          </li>
+                                          <li style="color:#0290b1;padding:8px;list-style-type:disc;margin-left:25px;">
+                                             <a><span style="color:#212121; font-siz:27px;">AWS TechCenter</span></a>
+                                          </li>
+                                          <li style="color:#0290b1;padding:8px;list-style-type:disc;margin-left:25px;">
+                                             <a><span style="color:#212121; font-siz:27px;">Yubico TechCenter</span></a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slds-col slds-small-size--12-of-12 slds-medium-size--12-of-12 slds-large-size--4-of-12 twittercomponent">
+                        <div class="ui-widget">
+                           <div class="topcontainer ccentrify_twitter">
+                              <div class="spacing">
+                                 <div class="heading2">TWITTER</div>
+                                 <div class="borderiframe">
+                                    <div class="element" align="center" style="position:relative;height:100%;overflow:hidden;">
+                                       <iframe class="iframestyle" frameborder="0" src="https://community.centrify.com/apex/Twitter_VF">
+                                       </iframe>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="slds-col slds-size--12-of-12 foot" style="background:#291f4c;">
+                  <div class="outerdivs1 ccentrify_footer">
+                     <div class="slds-grid slds-wrap tilesdiv">
+                        <div class="slds-col slds-small-size--12-of-12 slds-medium-size--12-of-12 slds-large-size--8-of-12">
+                           <div class="slds-grid slds-wrap fixcenter">
+                              <div class="borderforcontact">
+                                 <img src="{!$Resource.Phone}"/>
+                                 <span class="paddleftright">1.669.444.5200</span>
+                              </div>
+                              <div class="margintop10">
+                                 <img class="contactmailicon" src="{!$Resource.letter}"/>
+                                 <span>
+                                 <a class="contactpadding">Contact Us</a>
+                                 </span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slds-col slds-small-size--12-of-12 slds-medium-size--12-of-12 slds-large-size--4-of-12 aligntext fixcenter">
+                           <div class="shiftright">
+                              <span class="basicpadding"><a><img class="socialicons" src="{!$Resource.Twitter}" /></a>
+                              </span>
+                              <span class="basicpadding"><a><img class="socialicons" src="{!$Resource.linkedin}" /></a>
+                              </span>
+                              <span class="basicpadding"><a><img class="socialicons" src="{!$Resource.youtube}" /></a>
+                              </span>
+                              <span class="basicpadding"><a><img class="socialicons" src="{!$Resource.facebook}" /></a>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slds-grid slds-wrap slds-p-around--large postfeed outerdivs1 ccentrify_footer" style="border-bottom:.1px solid #cccccc;">
+                        <div class="slds-grid slds-wrap fotterlists">
+                           <div class="slds-col slds-max-small-size--6-of-12 slds-small-size--6-of-12 slds-medium-size--4-of-12 slds-large-size--2-of-12 aligntext margintop1">
+                              <span class="footerliheading">WHY CENTRIFY</span>
+                              <ul class="listmargin">
+                                 <li style="color:#000000 !important;font-size: 13px;"><a>Our Vision</a></li>
+                                 <li style="color:#000000 !important;font-size: 13px;"><a>Zero Trust Privilege</a></li>
+                                 <li style="color:#000000 !important;font-size: 13px;"><a>Benefits</a></li>
+                                 <li style="color:#000000 !important;font-size: 13px;"><a>Differentiators</a></li>
+                                 <li style="color:#000000 !important;font-size: 13px;"><a>Reviews</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="slds-col slds-max-small-size--6-of-12 slds-small-size--6-of-12 slds-medium-size--4-of-12 slds-large-size--2-of-12 aligntext margintop2">
+                           <span class="footerliheading">Company</span>
+                           <ul class="listmargin">
+                              <li style="color:#000000 !important;font-size: 13px;"><a>About us</a></li>
+                              <li style="color:#000000 !important;font-size: 13px;"><a>Partners</a></li>
+                              <li style="color:#000000 !important;font-size: 13px;"><a>Leadership</a></li>
+                              <li style="color:#000000 !important;font-size: 13px;"><a>News and Events</a></li>
+                              <li style="color:#000000 !important;font-size: 13px;"><a>Investors</a></li>
+                              <li style="color:#000000 !important;font-size: 13px;"><a>Careers</a></li>
+                              <li style="color:#000000 !important;font-size: 13px;"><a>Contact</a></li>
+                           </ul>
+                        </div>
+                        <div class="slds-col slds-max-small-size--6-of-12 slds-small-size--6-of-12 slds-medium-size--4-of-12 slds-large-size--2-of-12 aligntext margintop2">
+                           <span class="footerliheading">PRODUCTS</span>
+                           <ul class="listmargin">
+                              <li style="color:#000000 !important;font-size: 13px;"><a>Privileged Access Service</a></li>
+                              <li style="color:#000000 !important;font-size: 13px;"><a>Authentication Service</a></li>
+                              <li style="color:#000000 !important;font-size: 13px;"><a>Privilege Elevation Service</a></li>
+                              <li style="color:#000000 !important;font-size: 13px;"><a>Audit &#38; Monitoring Service</a></li>
+                              <li style="color:#000000 !important;font-size: 13px;"><a>Privilege Threat Analytics Service</a></li>
+                              <li style="color:#000000 !important;font-size: 13px;"><a>Supported Platforms</a></li>
+                              <li style="color:#000000 !important;font-size: 13px;"><a>How to Buy</a></li>
+                              <li style="color:#000000 !important;font-size: 13px;"><a>Free Trial</a></li>
+                           </ul>
+                        </div>
+                        <div class="slds-col slds-max-small-size--6-of-12 slds-small-size--6-of-12 slds-medium-size--4-of-12 slds-large-size--2-of-12 aligntext margintop2">
+                           <span class="footerliheading">SUPPORT</span>
+                           <ul class="listmargin">
+                              <li style="color:#000000 !important;font-size: 13px;"><a>Customer Portal</a></li>
+                              <li style="color:#000000 !important;font-size: 13px;"><a>Centrify Community</a></li>
+                              <li style="color:#000000 !important;font-size: 13px;"><a>Proffessional Services</a></li>
+                              <li style="color:#000000 !important;font-size: 13px;"><a>Cloud Status</a></li>
+                           </ul>
+                        </div>
+                        <div class="slds-col slds-max-small-size--6-of-12 slds-small-size--6-of-12 slds-medium-size--4-of-12 slds-large-size--2-of-12 aligntext margintop2">
+                           <span class="footerliheading">SOLUTIONS</span>
+                           <ul class="listmargin">
+                              <li style="color:#000000 !important;font-size: 13px;"><a>By Business Initiative</a></li>
+                              <li style="color:#000000 !important;font-size: 13px;"><a>By Capability</a></li>
+                              <li style="color:#000000 !important;font-size: 13px;"><a>By Attack Surface</a></li>
+                              <li style="color:#000000 !important;font-size: 13px;"><a>By Industry</a></li>
+                              <li style="color:#000000 !important;font-size: 13px;"><a>By Role</a></li>
+                           </ul>
+                        </div>
+                        <div class="slds-col slds-max-small-size--6-of-12 slds-small-size--6-of-12 slds-medium-size--4-of-12 slds-large-size--2-of-12 margintop2">
+                           <span class="footerliheading">RESOURCES</span>
+                           <ul class="listmargin ">
+                              <li style= "font-size: 13px;"><a>Analyst Reports</a></li>
+                              <li style="font-size: 13px;"><a>Best Practices</a></li>
+                              <li style="font-size: 13px;"><a>Blog</a></li>
+                              <li style="font-size: 13px;"><a>Case Studies</a></li>
+                              <li style="font-size: 13px;"><a>Data Sheets</a></li>
+                              <li style="font-size: 13px;"><a>eBooks</a></li>
+                              <li style="font-size: 13px;"><a>Infographics</a></li>
+                              <li style="font-size: 13px;"><a>Solution Briefs</a></li>
+                              <li style="font-size: 13px;"><a>Videos</a></li>
+                              <li style="font-size: 13px;"><a>Webinars</a></li>
+                              <li style="font-size: 13px;"><a>White Papers</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="slds-grid slds-wrap outerdivs1 ccentrify_footer">
+                        <div class="slds-col slds-max-small-size--12-of-12 slds-small-size--12-of-12 slds-medium-size--12-of-12 slds-large-size--12-of-12 ipadwidth" style="padding:50px 0px;">
+                           <div class="slds-grid slds-wrap">
+                              <div class="pdetails slds-col slds-max-small-size--12-of-12 slds-small-size--12-of-12 slds-medium-size--12-of-12 slds-large-size--5-of-12 centertext">
+                                 <span>©2019 Centrify Corporation. All rights reserved.</span>
+                              </div>
+                              <div class="slds-col slds-max-small-size--12-of-12 slds-small-size--12-of-12 slds-medium-size--12-of-12 slds-large-size--6-of-12 paddtop10">
+                                 <a class="paddtop25 pdetails1">Privacy Policy</a>
+                                 <a class="paddtop25 pdetails1">Terms Of Use</a>
+                                 <a class="paddtop25 pdetails1">Site Map</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </ui:scrollerWrapper>
+   </div>
+   <!--Centrify Banner-->
+</aura:component>

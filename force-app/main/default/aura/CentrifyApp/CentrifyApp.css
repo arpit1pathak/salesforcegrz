@@ -1,0 +1,82 @@
+.THIS.list
+{
+    background-color:#626262;
+    text-align:center;
+    position:fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 90px;
+    float: left;
+    overflow:;
+    
+}
+.THIS .home
+{ 
+   width:88px;
+   height:109px;
+   background-color:#AE0000; 
+   text-align:center; 
+}
+.THIS .forums
+{
+ width:88px;
+ height:106px; 
+ text-align:center;
+}
+.THIS #p01:hover
+{
+color:white;
+background-color:#AE0000;
+}
+.THIS #p02
+{
+margin-left:1000px;    
+}
+.THIS.shade
+{
+background-color:white;  
+width:1900px;
+height:79px;
+padding:0px 95px;
+}
+.THIS .container
+{
+  margin-top:-60px;
+  margin-left:750px;  
+  margin-right:10px;
+  width:1135.98px;
+  height:59px;  
+  border:3px solid green;
+  padding: 10px;
+}
+.THIS .centrifybutton
+{
+  background-color:;
+  width:598.11px;
+  height:58px;
+  margin-top:20px;
+  margin-left:260px;
+  padding:8px;
+  padding:0px;
+}
+.THIS .tryitnow
+{
+  background-color: #AE0000;
+  text-align: center;
+  display: inline-block;
+  font-size:12px;  
+  font-weight:500.24;
+  text-transform:uppercase;
+  width:110.00px;
+  height:33px;
+  line-height:1.05rem;  
+  margin-left:10px;
+  margin-top:-10px; 
+  margin-right:30px;  
+}
+.THIS .message
+{
+  
+}

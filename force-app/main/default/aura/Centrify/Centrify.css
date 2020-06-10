@@ -1,0 +1,2113 @@
+.THIS .page
+{
+ background-color:white;
+ max-height:100%;
+ width:100%;
+}
+.THIS .header
+{
+ background-color:white;
+ width:auto;
+}
+.THIS .scrollersize
+{
+    overflow-y:auto;
+}
+.THIS .menuleft svg
+{
+fill: #ae0000;
+    width: 10%;
+    height: 118px;
+    padding-top: 20px;
+    margin-left: 39px;
+}
+.THIS .centrify
+{
+    margin-left:30%;
+    height: 45%;
+    width: 60%;
+    margin-top: -40%;
+    
+}
+.THIS .login
+{
+    background-clip: padding-box;
+    background-color: #0290a9 !important;
+    border: 0 none;
+    border-radius: 4px;
+    padding: 8px 11px 9px;
+    width: 21%;
+    height: 36%;
+     margin-left: 59%;
+        margin-top: -122px;
+        text-transform: uppercase;
+    font-size:25px;
+    display:block;
+
+}
+.THIS .menuright svg
+{
+    fill: #ae0000;
+    float:right;
+        margin-top: 53px;
+    margin-right: 29px
+}
+.THIS .hide
+{
+    display:none
+}
+.THIS .leftpaneldiv
+    {
+        
+   display:none;
+    }
+    .THIS .icons
+    {
+    display:none;
+    }
+    .THIS .home
+    {
+            display:none;
+    }
+    .THIS .color
+    {
+        display:none;
+    }
+    .THIS .iconstext
+    {
+     display:none;
+    }
+.THIS .backgroundimagediv
+{
+           margin-top: -4%;
+    min-height:315px;
+    background-size:cover;
+}
+.THIS .margintop
+{
+       margin-top: 9%;
+}
+.THIS .welcometext
+{
+    font-family: Muli-ExtraBold;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ae0000;
+}
+.THIS .subtext
+{
+    margin-bottom: 26px;
+    font-size: 18px;
+    padding: 0 14%;
+    font-family: Muli-ExtraBold;
+    font-size: 18px;
+    color: #ae0000;
+    text-align: center;
+    font-weight:bolder;
+}
+.THIS .search
+{
+    width: 100%;
+    border-radius: 4px 0 0 4px;
+    background-color: #ffffff;
+    font-size: 20px;
+    padding: 13px 20px 13px 20px;
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+.THIS .themecolor
+{
+        background-color: #ae0000;
+    text-align: center;
+    width:46px;
+    height:50px;
+}
+.THIS .themecolor svg
+{
+        background-color: #ae0000;
+    text-align: center;
+    width:30px;
+    height:45px;
+}
+    .THIS .textstyl 
+    {
+        font-family: Muli;
+    font-size: 18px;
+    padding: 12px 0;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+        background-color:#7A0000;
+    text-decoration:none
+    
+    }
+.THIS .paddingtopbottom
+    {
+        padding: 20px 48px;
+    }
+    .THIS .lightgraybackground
+    {
+            background: #fafafa;
+    }
+    .THIS .centercontent
+    {
+        justify-content: center;
+    }
+    .THIS .paddaround10 
+    {
+    padding: 10px 20px;
+    }
+    .THIS .paddingaround30
+    {
+        padding: 30px 15px;
+    }
+    .THIS .bordergrayaround
+    {
+            border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    }
+    .THIS .whitebackground
+    {
+        background: white;
+    }
+    .THIS .paddbottom5
+    {
+        padding-bottom: 5px;
+    padding-top:20px;
+    }
+    .THIS .solutionsimage
+    {
+        width: 81px;
+    height: 64px;
+    margin: auto;
+    background-position: top center;
+    margin-left: 48%;
+    }
+ .THIS .custombutton
+    {
+      background-color: #ffffff;
+    border: none;
+    color: #ae0000;
+    padding: 7px 21px;
+    border: 2px solid #ae0000;
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 8px 2px 0 2px;
+    cursor: pointer;
+    }
+ .THIS .paddingmaindiv
+    {
+        padding: 0 5% !important;
+    }
+    .THIS .ccentrify_postleaderboard
+    {
+      max-width: 1170px;
+    margin: 10px auto 10px auto;  
+    }
+    .THIS .ui-widget
+    {
+            font-family: 'Muli' !important;
+    }
+    .THIS .header1
+    {
+            padding: 0 0 17px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    }
+    .THIS .divborder
+    {
+            border-bottom: 1px solid #d4d4d4;
+    padding: 14px 0;
+    font-family: 'Muli',sans-serif;
+    }
+    .THIS .feedicons
+    {
+            border: .5px solid #cccccc;
+    border-radius: 4px;
+    width: 48px;
+    padding: 8px;
+    }
+    .THIS .image
+    {
+        max-width: 100%;
+    height: auto;
+    }
+    .THIS .heading
+    {
+    font-family: 'Muli',sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    color: #0466b5;
+    }
+    .THIS .subheading
+    {
+            font-family: 'Muli',sans-serif;
+    font-size: 15px;
+    color: #333333;
+    font-weight: normal;
+    }
+    .THIS .pdetails
+    {
+        font-family: 'Muli',sans-serif;
+    font-size: 13px;
+    color: #6b6b6b;
+    padding-right: 10px;
+    vertical-align: middle;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 2.08;
+    }
+    .THIS .commentno
+    {
+        margin-bottom: 3px;
+}
+    .THIS .divborder
+{
+        border-bottom: 1px solid #d4d4d4;
+    padding: 14px 0;
+    font-family: 'Muli',sans-serif;
+    }
+    .THIS .userinfospacing
+    {
+        color: #6b6b6b;
+    }
+    .THIS .smallicons
+    {
+            width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    margin-bottom: 1px;
+    }
+.THIS .cCentrify_leaderBoard_component 
+    {
+    padding-left: 40px;
+}
+    .THIS .ui-widget
+    {
+            font-family: 'Muli' !important;
+    }
+    
+    .THIS .leaderboardheading
+    {
+            color: #333333;
+    font-family: 'Muli';
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0px 0 20px 0;
+    text-transform: capitalize;
+    }
+    .THIS .clear
+	{
+  
+    }
+    .THIS .leaderboardrowwrapper
+    {
+        color: #333;
+        text-decoration: none;
+        font-weight: 300;
+        border-top: 1px solid #d4d4d4;
+    }
+    .THIS .btm{
+        border-bottom: 1px solid #d4d4d4;
+    }
+    .THIS .mar
+    {
+        margin-top:-10px;
+    }
+ .THIS .levelandpointscol
+    {
+        display:inline-block;
+    }
+    .THIS .comm-leaderboard__user-name
+    {
+    font-family: 'Muli',sans-serif;
+    font-size: 16px;
+    color: #0290b1;
+    }
+    .THIS .comm-leaderboard__level-name
+    {
+        font-size: 14px;
+    font-family: 'Muli';
+    color: #959ba1;
+    }
+    .THIS .comm-leaderboard__points-column
+    {
+        border: 2px solid #dddddd;
+    border-radius: 4px;
+    font-family: 'Muli';
+    font-size: 12px;
+    color: #404040;
+    width: 53px;
+    height: 42px;
+    }
+    .THIS .comm-leaderboard__points
+    {
+        color: #404040;
+        font-family: 'Muli';
+    }
+    .THIS .forcecommunityreputationleaderboard42
+    {
+        clear:both;
+    }
+.THIS a:hover
+    {
+        text-decoration:none;
+    }  
+   .THIS .forcecommunityrichtext
+    {
+            word-wrap: break-word;
+    }
+  .THIS .ccentrify_homecarousel
+    {
+        
+    }
+    .THIS .containertext
+    {
+        text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    }
+    .THIS .bg1
+    {
+        background-size:fit;
+    }
+    .THIS a:hover
+    {
+        text-decoration:none;
+    }
+    .THIS .slideshow-container
+    {
+            position: relative;
+    margin: auto;
+    }
+    .THIS .active
+    {
+        -webkit-transition: -webkit-transform 1s ease-in-out;
+    -o-transition: -o-transform ease-in-out;
+    display: block;
+    }
+    .THIS .containertext
+    {
+            text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    }
+    .THIS .bg1
+    {
+       background-repeat: round;
+    background-size: cover; 
+    }
+    .THIS .titletext
+    {
+            width: 80%;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 22px;
+    padding: 10px 0 0 0;
+    color: #ae0000;
+    }
+    .THIS .titlehead
+    {
+        color: #ae0000;
+    font-size: 31px;
+    font-weight: 600;
+    text-align: center;
+    padding: 5px 0 0 0;
+    line-height: 1.6;
+    margin: 0 auto;
+            padding-left: 136px;
+
+    }
+    .THIS .carousel_btn_div 
+    {
+            padding: 25px 0;
+            margin-top: -74px;
+    margin-left: 74px;
+    }
+    .THIS .learn_btn
+    {
+        border: 2px solid #ae0000;
+    background: #ae0000;
+    color: #fff!important;
+    padding: 9px 44px;
+    font-size: 20px;
+    font-weight: bold
+    }
+    .THIS .dotsdiv
+    {
+        position: absolute;
+    text-align: center;
+    bottom: 18px;
+    float: none;
+    width: 100%;
+    }
+    .THIS .activedot
+    {
+        background-color: #ae0000;
+    }
+    .THIS .dot
+    {
+            cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease;
+    }
+    .THIS .dot:hover
+    {
+    background-color: #ae0000;
+}
+    .THIS .dot:active
+    {
+      background-color: #ae0000;
+        transition: background-color .6s ease;
+    }
+    .THIS .dot:focus
+    {
+      background-color: #ae0000;  
+    }
+   .THIS .forcecommunityrichtext
+    {
+            word-wrap: break-word;
+    }
+  .THIS .ccentrify_homecarousel
+    {
+        
+    }
+    .THIS .containertext
+    {
+        text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    }
+    .THIS .bg1
+    {
+        background-size:fit;
+    }
+    .THIS a:hover
+    {
+        text-decoration:none;
+    }
+    .THIS .slideshow-container
+    {
+            position: relative;
+    margin: auto;
+    }
+    .THIS .active
+    {
+        -webkit-transition: -webkit-transform 1s ease-in-out;
+    -o-transition: -o-transform ease-in-out;
+    display: block;
+    }
+    .THIS .containertext
+    {
+            text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    }
+    .THIS .bg1
+    {
+       background-repeat: round;
+    background-size: cover; 
+    }
+    .THIS .titletext
+    {
+            width: 80%;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 22px;
+    padding: 10px 0 0 0;
+    color: #ae0000;
+    }
+    .THIS .titlehead
+    {
+        color: #ae0000;
+    font-size: 31px;
+    font-weight: 600;
+    text-align: center;
+    padding: 5px 0 0 0;
+    line-height: 1.6;
+    margin: 0 auto;
+            padding-left: 136px;
+
+    }
+    .THIS .carousel_btn_div 
+    {
+            padding: 25px 0;
+            margin-top: -74px;
+    margin-left: 74px;
+    }
+    .THIS .learn_btn
+    {
+        border: 2px solid #ae0000;
+    background: #ae0000;
+    color: #fff!important;
+    padding: 9px 44px;
+    font-size: 20px;
+    font-weight: bold
+    }
+    .THIS .dotsdiv
+    {
+        position: absolute;
+    text-align: center;
+    bottom: 18px;
+    float: none;
+    width: 100%;
+    }
+    .THIS .activedot
+    {
+        background-color: #ae0000;
+    }
+    .THIS .dot
+    {
+            cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease;
+    }
+    .THIS .dot:hover
+    {
+    background-color: #ae0000;
+}
+    .THIS .dot:active
+    {
+      background-color: #ae0000;
+        transition: background-color .6s ease;
+    }
+    .THIS .dot:focus
+    {
+      background-color: #ae0000;  
+    
+    }
+    .THIS .Heading
+    {
+        font-size: 16px;
+    font-weight: bold;
+    color: #ae0000;
+    padding: 10px;
+    font-family: 'Muli',sans-serif;
+    text-align: -webkit-center;
+    }
+    .THIS .sbheading
+    {
+        color: #212121;
+    font-size: 32px;
+    font-family: 'Muli',sans-serif;
+    text-align: -webkit-center;
+    line-height: 1.25;
+    }
+    .THIS .margin
+    {
+        margin: 0 auto;
+    }
+    .THIS .caraousel_btn_div
+    {
+            padding: 25px 0;
+    }
+ .THIS .tourbox
+    {
+            margin-bottom: 106px;
+    margin-top: 30px;
+    }
+  .THIS .techcenter
+    {
+        padding-left: 46px;
+    margin-right: 20px;
+    }
+ .THIS .twittercomponent
+    {
+        padding-left: 8px;
+        margin-left: 3%;
+    }
+    .THIS .spacing
+    {
+        padding: 10px;
+    }
+    .THIS .heading2
+    {
+        color: #ae0000;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Muli',sans-serif;
+    padding: 0 0 10px 0;
+    }
+    .THIS .borderiframe
+    {
+            width: 96%;
+    height: 300px;
+    border-radius: 4px;
+    background-color: #0290b1;
+    position: relative;
+    padding: 10px;
+    }
+ .THIS .foot
+    {
+            margin-top: 60px;
+    }
+    .THIS .outerdivs1
+    {
+            color: #ffffff;
+    font-family: 'Muli',sans-serif;
+    padding: 0 5%;
+    background: #3b3b3b;
+    margin: auto;
+    }
+    .THIS .tilesdiv
+{
+            border-bottom: 1px solid rgba(239, 239, 239, 0.5);
+    padding: 50px 0 50px 0;
+    }
+    .THIS .paddleftright
+    {
+            padding-left: 20px;
+    padding-right: 30px;
+    }
+    .THIS .margintop10
+    {
+        
+    }
+    .THIS .contactmailicon
+    {
+            border-radius: 3px;
+    width: 37px;
+    height: 20px;
+    border: none;
+    padding-right: 10px;
+    margin-left: 8px;
+    }
+    .THIS .contactpadding
+    {
+        padding-right: 32px;
+    color: #fff;
+    }
+    .THIS .shiftright
+    {
+        text-align: right;
+    margin-top:-30px;
+    }
+    .THIS .basicpadding
+    {
+            padding-right: 20px;
+    }
+    .THIS .socialicons
+    {
+            border-radius: 5px;
+    width: 28px;
+    height: 28px;
+    border: none;
+    }
+    .THIS .outerdivs1
+    {
+            color: #ffffff;
+    font-family: 'Muli',sans-serif;
+    padding: 0 5%;
+    background: #3b3b3b;
+    margin: auto;
+    }
+    .THIS .footerlists
+    {
+        width: 100%;
+    }
+    .THIS .margintop1
+    {
+        margin-top:25px;
+        width:100%;
+    }
+    .THIS .footerliheading
+    {
+        font-size: 13px;
+    color: #f3f2f2;
+    font-family: 'Muli',sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    }
+    .THIS .listmargin
+    {
+        margin-top:10px;
+    }
+    .THIS .margintop2
+    {
+            margin-top: 24px;
+        width: 13%;
+    }
+  .THIS .pdetails1
+    {
+        font-family: 'Muli',sans-serif;
+    font-size: 12px;
+    color: #6b6b6b;
+    color: rgba(239, 239, 239, 0.5);
+    font-weight: bold;
+    vertical-align: middle;
+    }
+    .THIS .paddtop25
+    {
+        padding-right:25px;
+    }
+@media screen and (min-device-width:767px) and (max-device-width:1024px)
+{
+.THIS .menuleft svg
+{
+display:none;
+}
+.THIS .menuright svg
+{
+display:none;    
+}  
+.THIS .header
+{
+ height:35%;           
+ background-color:white;   
+ margin-left:8%;       
+}
+.THIS .centrify
+{
+    margin-top:20px;
+    width: 60%;
+    height: 44%;
+    margin-left:30px;
+}
+ .THIS .login
+{
+display:none;
+}   
+.THIS .hide
+{
+    display:block;
+     
+}
+    .THIS .loginlarge
+    {
+        background-clip: padding-box;
+    background-color: #0290a9 !important;
+    border: 0 none;
+    border-radius: 4px;
+    padding: 8px 11px 9px;
+    width: 10%;
+    height: 30%;
+    }
+    .THIS .horizontalnav
+    {
+       margin-left: 10%;
+      
+    }
+    .THIS .horizontalnav li
+    {
+       float:left;
+        text-decoration: none;
+        padding:8px;
+    }
+    .THIS .horizontalnav li a
+    {
+       float:left;
+       text-decoration:none;
+        font-size: 18px;
+        margin-top: -10px;
+        font-family: Muli;
+        font-weight:90;
+            color: #5c5757;
+    }
+    .THIS .lilogin
+    {
+      margin-top: -20px; 
+         text-transform: uppercase;
+    font-size:16px;
+        background-clip: padding-box;
+    background-color: #0290a9 !important;
+    border: 0 none;
+    border-radius: 4px;
+    padding: 8px 11px 9px;
+       width: 84px;
+    height: 43px;
+    }
+    .THIS .message svg
+    {
+     width: 46px;
+    height: 37px;
+    background-color: #0290a9 !important;
+    }
+    .THIS .tryitnow svg
+    {
+       margin-top:-15px;
+       height: 39px;
+    width: 127px;
+    }
+    .THIS .horizontalnav2
+    {
+        margin-top: 12px;
+        margin-left: 0%;
+        
+    }
+    .THIS .horizontalnav2 li a
+    {
+        float:left;
+        padding:4px;
+        margin-top: -24px;
+        margin-left:3%;
+        font-family: Muli;
+        font-weight:90;
+        font-size:18px;
+        color: #5c5757;
+        text-decoration:none;
+    }
+
+    .THIS .leftpaneldiv
+    {
+        
+    background: #626262;
+    text-align: center;
+    position: fixed;
+    overflow-y:scroll thin;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 90px;
+    float: left;
+        display: block;
+    }
+    .THIS .icons
+    {
+    padding: 23px 0 23px 0;
+    border-bottom: 1px solid rgb(128,128,128);
+        display: block;
+    }
+     .THIS .icons:hover
+    {
+       background-color: #ae0000; 
+    }
+    .THIS .home
+    {
+            background-color: #ae0000;
+        display: block;
+    }
+    .THIS .color
+    {
+        background: #626262;
+        display: block;
+    }
+    .THIS .iconstext
+    {
+        color: white;
+    font-size: 13px;
+    padding-top: 10px;
+    text-align: center;
+    display: block;
+    }
+    .THIS .backgroundimagediv
+{
+  width:100%;
+        background-size:cover;
+        background-attachment:fixed;
+}
+       .THIS .margintop
+    {
+        margin-top:15%;
+    }
+    .THIS .welcometext
+{
+    font-family: Muli-ExtraBold;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ae0000;
+}
+    .THIS .subtext
+{
+    margin-bottom: 26px;
+    font-size: 18px;
+    padding: 0 14%;
+    font-family: Muli-ExtraBold;
+    font-size: 18px;
+    color: #ae0000;
+    text-align: center;
+    font-weight:bolder;
+}
+        .THIS .textstyl
+    {
+        font-family: Muli;
+    font-size: 18px;
+    padding: 12px 0;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+        background-color:#7A0000;
+            text-decoration:none
+    }
+    .THIS .paddingtopbottom
+    {
+        padding: 20px 48px;
+    }
+    .THIS .lightgraybackground
+    {
+            background: #fafafa;
+    }
+    .THIS .centercontent
+    {
+        justify-content: center;
+    }
+    .THIS .paddaround10 
+    {
+    padding: 10px 20px;
+    }
+    .THIS .paddingaround30
+    {
+        padding: 30px 15px;
+    }
+    .THIS .bordergrayaround
+    {
+            border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    }
+    .THIS .whitebackground
+    {
+        background: white;
+    }
+    .THIS .paddbottom5
+    {
+        padding-bottom: 5px;
+         padding-top:20px;
+    }
+    .THIS .solutionsimage
+    {
+        width: 81px;
+    height: 64px;
+    margin: auto;
+    background-position: top center;
+        margin-left: 48%;
+    }
+     .THIS .custombutton
+    {
+      background-color: #ffffff;
+    border: none;
+    color: #ae0000;
+    padding: 7px 21px;
+    border: 2px solid #ae0000;
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 8px 2px 0 2px;
+    cursor: pointer;
+    }
+     .THIS .paddingmaindiv
+    {
+        padding: 0 5% !important;
+    }
+    .THIS .ccentrify_postleaderboard
+    {
+      max-width: 1170px;
+    margin: 10px auto 10px auto;  
+    }
+    .THIS .ui-widget
+    {
+            font-family: 'Muli' !important;
+    }
+    .THIS .header1
+    {
+            padding: 0 0 17px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    }
+    .THIS .divborder
+    {
+            border-bottom: 1px solid #d4d4d4;
+    padding: 14px 0;
+    font-family: 'Muli';
+    }
+    .THIS .feedicons
+    {
+            border: .5px solid #cccccc;
+    border-radius: 4px;
+    width: 48px;
+    padding: 8px;
+    }
+    .THIS .image
+    {
+        max-width: 100%;
+    height: auto;
+    }
+    .THIS .heading
+    {
+            font-family: 'Muli';
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    color: #0466b5;
+    }
+    .THIS .subheading
+    {
+            font-family: 'Muli',sans-serif;
+    font-size: 15px;
+    color: #333333;
+    font-weight: normal;
+    }
+    .THIS .pdetails
+    {
+        font-family: 'Muli';
+    font-size: 13px;
+    color: #6b6b6b;
+    padding-right: 10px;
+    vertical-align: middle;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 2.08;
+    }
+    .THIS .commentno
+    {
+        margin-bottom: 3px;
+}
+    .THIS .divborder
+{
+        border-bottom: 1px solid #d4d4d4;
+    padding: 14px 0;
+    font-family: 'Muli';
+    }
+    .THIS .userinfospacing
+    {
+        color: #6b6b6b;
+    }
+    .THIS .smallicons
+    {
+            width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    margin-bottom: 1px;
+    }
+    .THIS .cCentrify_leaderBoard_component 
+    {
+    padding-left: 40px;
+}
+    .THIS .ui-widget
+    {
+            font-family: 'Muli' !important;
+    }
+    
+    .THIS .leaderboardheading
+    {
+            color: #333333;
+    font-family: 'Muli';
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0px 0 20px 0;
+    text-transform: capitalize;
+    }
+    .THIS .clear
+	{
+  
+    }
+    .THIS .leaderboardrowwrapper
+    {
+        color: #333;
+        text-decoration: none;
+        font-weight: 300;
+        border-top: 1px solid #d4d4d4;
+    }
+    .THIS .btm{
+        border-bottom: 1px solid #d4d4d4;
+    }
+    .THIS .mar
+    {
+        margin-top:-10px;
+    }
+ .THIS .levelandpointscol
+    {
+        display:inline-block;
+    }
+    .THIS .comm-leaderboard__user-name
+    {
+    font-family: 'Muli';
+    font-size: 16px;
+    color: #0290b1;
+    }
+    .THIS .comm-leaderboard__level-name
+    {
+        font-size: 14px;
+    font-family: 'Muli';
+    color: #959ba1;
+    }
+    .THIS .comm-leaderboard__points-column
+    {
+        border: 2px solid #dddddd;
+    border-radius: 4px;
+    font-family: 'Muli';
+    font-size: 12px;
+    color: #404040;
+    width: 53px;
+    height: 42px;
+    }
+    .THIS .comm-leaderboard__points
+    {
+        color: #404040;
+        font-family: 'Muli';
+    }
+    .THIS .forcecommunityreputationleaderboard42
+    {
+        clear:both;
+    }
+     .THIS a:hover
+    {
+        text-decoration:none;
+    }
+        .THIS .Heading
+    {
+        font-size: 16px;
+    font-weight: bold;
+    color: #ae0000;
+    padding: 10px;
+    font-family: 'Muli',sans-serif;
+    text-align: -webkit-center;
+    }
+    .THIS .sbheading
+    {
+        color: #212121;
+    font-size: 32px;
+    font-family: 'Muli',sans-serif;
+    text-align: -webkit-center;
+    line-height: 1.25;
+    }
+    .THIS .margin
+    {
+        margin: 0 auto;
+    }
+    .THIS .caraousel_btn_div
+    {
+            padding: 25px 0;
+    }
+    .THIS .tourbox
+    {
+            margin-bottom: 106px;
+    margin-top: 30px;
+    }
+    .THIS .techcenter
+    {
+        padding-left: 46px;
+    margin-right: 20px;
+    }
+     .THIS .twittercomponent
+    {
+        padding-left: 8px;
+        margin-left: 3%;
+    }
+    .THIS .spacing
+    {
+        padding: 10px;
+    }
+    .THIS .heading2
+    {
+        color: #ae0000;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Muli',sans-serif;
+    padding: 0 0 10px 0;
+    }
+    .THIS .borderiframe
+    {
+            width: 96%;
+    height: 300px;
+    border-radius: 4px;
+    background-color: #0290b1;
+    position: relative;
+    padding: 10px;
+    }
+     .THIS .foot
+    {
+            margin-top: 60px;
+    }
+    .THIS .outerdivs1
+    {
+            color: #ffffff;
+    font-family: 'Muli',sans-serif;
+    padding: 0 5%;
+    background: #3b3b3b;
+    margin: auto;
+    }
+    .THIS .tilesdiv
+{
+            border-bottom: 1px solid rgba(239, 239, 239, 0.5);
+    padding: 50px 0 50px 0;
+    }
+    .THIS .paddleftright
+    {
+            padding-left: 20px;
+    padding-right: 30px;
+    }
+    .THIS .margintop10
+    {
+        
+    }
+    .THIS .contactmailicon
+    {
+            border-radius: 3px;
+    width: 37px;
+    height: 20px;
+    border: none;
+    padding-right: 10px;
+    margin-left: 8px;
+    }
+    .THIS .contactpadding
+    {
+        padding-right: 32px;
+    color: #fff;
+    }
+    .THIS .shiftright
+    {
+        text-align: right;
+    }
+    .THIS .basicpadding
+    {
+            padding-right: 20px;
+    }
+    .THIS .socialicons
+    {
+            border-radius: 5px;
+    width: 28px;
+    height: 28px;
+    border: none;
+    }
+     .THIS .outerdivs1
+    {
+            color: #ffffff;
+    font-family: 'Muli',sans-serif;
+    padding: 0 5%;
+    background: #3b3b3b;
+    margin: auto;
+    }
+    .THIS .footerlists
+    {
+        width: 100%;
+    }
+    .THIS .margintop1
+    {
+        margin-top:25px;
+        width:100%;
+    }
+    .THIS .footerliheading
+    {
+        font-size: 13px;
+    color: #f3f2f2;
+    font-family: 'Muli',sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    }
+    .THIS .listmargin font
+    {
+        margin-top:10px;
+        color:rgba(239, 239, 239, 0.5);
+    }
+     .THIS .outerdivs1
+    {
+            color: #ffffff;
+    font-family: 'Muli',sans-serif;
+    padding: 0 5%;
+    background: #3b3b3b;
+    margin: auto;
+    }
+    .THIS .footerlists
+    {
+        width: 100%;
+    }
+    .THIS .margintop1
+    {
+        margin-top:25px;
+        width:100%;
+    }
+    .THIS .footerliheading
+    {
+        font-size: 13px;
+    color: #f3f2f2;
+    font-family: 'Muli',sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    }
+    .THIS .listmargin
+    {
+        margin-top:10px;
+    }
+      .THIS .pdetails1
+    {
+        font-family: 'Muli',sans-serif;
+    font-size: 12px;
+    color: #6b6b6b;
+    color: rgba(239, 239, 239, 0.5);
+    font-weight: bold;
+    vertical-align: middle;
+    }
+    .THIS .paddtop25
+    {
+        padding-right:25px;
+    }
+   
+}
+@media screen and (min-device-width:1024px) and (max-device-width:1400px)
+{
+    .THIS .page
+{
+ background-color:white;
+ max-height:100%;
+ width:100%;
+}
+.THIS .menuleft svg
+{
+display:none;
+}
+.THIS .menuright svg
+{
+display:none;    
+}  
+.THIS .header
+{
+
+ background-color:white;
+ margin-left: 6.5%;    
+}
+.THIS .centrify
+{
+    margin-top:15px;
+    height: 40%;
+    width: 50%;
+    margin-left:30px;
+}
+ .THIS .login
+{
+display:none;
+}   
+.THIS .hide
+{
+    display:block;
+     
+}
+    .THIS .loginlarge
+    {
+        background-clip: padding-box;
+    background-color: #0290a9 !important;
+    border: 0 none;
+    border-radius: 4px;
+    padding: 8px 11px 9px;
+    width: 10%;
+    height: 30%;
+    }
+    .THIS .horizontalnav
+    {
+      margin-left:28%;
+            margin-top: 25px;
+    }
+    .THIS .horizontalnav li
+    {
+       float:left;
+        text-decoration: none;
+        padding:8px;
+    }
+    .THIS .hide
+    {
+            margin-left: 65px;
+    margin-top: -18px;
+    }
+    .THIS .horizontalnav li a
+    {
+       float:left;
+       text-decoration:none;
+        font-size: 16px;
+        font-family: Muli;
+        font-weight:90;
+        color: #5c5757;
+       /* margin-left: 100px;*/
+        margin-top: -14px;
+        padding:2px;
+    }
+    .THIS .lilogin
+    {
+      margin-top: -20px; 
+         text-transform: uppercase;
+    font-size:16px;
+        background-clip: padding-box;
+    background-color: #0290a9 !important;
+    border: 0 none;
+    border-radius: 4px;
+    padding: 5px 11px 9px;
+    width: 64px;
+    height: 37px;
+    }
+    .THIS .message svg
+    {
+     width: 46px;
+        height: 33px;
+    background-color: #0290a9 !important;
+    }
+    .THIS .tryitnow svg
+    {
+       margin-top:-15px;
+       height: 39px;
+       width:125px;
+    }
+    .THIS .horizontalnav2
+    {
+       margin-left: 16%;
+
+    }
+    .THIS .horizontalnav2 li a
+    {
+        float:left;
+        padding:8px;
+        margin-top:-3%;
+        font-family: Muli;
+        font-weight:90;
+        font-size:16px;
+        color: #5c5757;
+        text-decoration:none;
+    }
+    .THIS .bkgroundImg
+{
+    margin-left:10%; 
+        background-attachment: fixed;
+}
+    .THIS .leftpaneldiv
+    {
+        
+        background: #626262;
+    text-align: center;
+    position: fixed;
+    overflow-y:scroll thin;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 90px;
+    float: left;
+    display:block;
+    }
+    .THIS .icons
+    {
+    padding: 23px 0 23px 0;
+    border-bottom: 1px solid rgb(128,128,128);
+    display:block;
+    }
+    .THIS .icons:hover
+    {
+       background-color: #ae0000; 
+    }
+    .THIS .home
+    {
+            background-color: #ae0000;
+        display:block;
+    }
+    .THIS .color
+    {
+        background: #626262;
+        display:block;
+    }
+    .THIS .iconstext
+    {
+        color: white;
+    font-size: 13px;
+    padding-top: 10px;
+    text-align: center;
+    display: block;
+    }
+.THIS .backgroundimagediv
+{
+         margin-top: -43px;
+    margin-left: 0px;
+        background-size:cover;
+        height:360px;
+       width:100%;
+        
+    }
+    .THIS .margintop
+    {
+        margin-top:15%;
+    }
+    
+    .THIS .welcometext
+{
+    font-family: Muli-ExtraBold;
+    font-size: 33px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ae0000;
+}
+    .THIS .subtext
+{
+    
+    font-size: 18px;
+    padding: 0 14%;
+    font-family: Muli-ExtraBold;
+    font-size: 18px;
+    color: #ae0000;
+    text-align: center;
+    font-weight:bolder;
+        margin-bottom: 26px;
+        margin-top:10px;
+}
+    .THIS .searchgrid
+    {
+           margin-top: -18px;
+    }
+    .THIS .search
+    {
+        margin-top:18px;
+    }
+    .THIS .textstyl
+    {
+        font-family: Muli;
+    font-size: 18px;
+    padding: 12px 0;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+        background-color:#7A0000;
+            text-decoration:none;
+    }
+    .THIS .paddingTopBottom
+    {
+        padding: 20px 48px;
+    }
+    .THIS .lightgraybackground
+    {
+            background: #fafafa;
+    }
+    .THIS .centercontent
+    {
+        justify-content: center;
+    }
+    .THIS .paddAround10 
+    {
+    padding: 10px 20px;
+    }
+    .THIS .paddingaround30
+    {
+        padding: 30px 15px;
+    }
+    .THIS .bordergrayaround
+    {
+            border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    }
+    .THIS .whitebackground
+    {
+        background: white;
+    }
+    .THIS .paddBottom5
+    {
+        padding-bottom: 13px;
+        padding-top:20px;
+        
+    }
+    .THIS .solutionsimage
+    {
+        width: 81px;
+    height: 64px;
+    margin: auto;
+    background-position: top center;
+        margin-left:40%;
+    }
+   .THIS .custombutton
+    {
+      background-color: #ffffff;
+    border: none;
+    color: #ae0000;
+    padding: 7px 21px;
+    border: 2px solid #ae0000;
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 8px 2px 0 2px;
+    cursor: pointer;
+    }
+    .THIS .paddingmaindiv
+    {
+        padding: 0 5% !important;
+    }
+    .THIS .ccentrify_postleaderboard
+    {
+      max-width: 1170px;
+    margin: 10px auto 10px auto;  
+    }
+    .THIS .ui-widget
+    {
+            font-family: 'Muli' !important;
+    }
+    .THIS .header1
+    {
+            padding: 0 0 17px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    }
+    .THIS .divborder
+    {
+            border-bottom: 1px solid #d4d4d4;
+    padding: 14px 0;
+    font-family: 'Muli';
+    }
+    .THIS .feedicons
+    {
+            border: .5px solid #cccccc;
+    border-radius: 4px;
+    width: 48px;
+    padding: 8px;
+    }
+    .THIS .image
+    {
+        max-width: 100%;
+    height: auto;
+    }
+    .THIS .heading
+    {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    color: #2574a9;
+    font-family: 'Muli',sans-serif;
+    }
+    .THIS .subheading
+    {
+            font-family: 'Muli',sans-serif;
+    font-size: 15px;
+    color: #333333;
+    font-weight: normal;
+    }
+    .THIS .pdetails
+    {
+        font-family: 'Muli';
+    font-size: 13px;
+    color: #6b6b6b;
+    padding-right: 10px;
+    vertical-align: middle;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 2.08;
+    }
+    .THIS .commentno
+    {
+        margin-bottom: 3px;
+}
+    .THIS .divborder
+{
+        border-bottom: 1px solid #d4d4d4;
+    padding: 14px 0;
+    font-family: 'Muli';
+    }
+    .THIS .userinfospacing
+    {
+        color: #6b6b6b;
+    }
+    .THIS .smallicons
+    {
+            width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    margin-bottom: 1px;
+    }
+    .THIS .cCentrify_leaderBoard_component 
+    {
+    padding-left: 40px;
+}
+    .THIS .ui-widget
+    {
+            font-family: 'Muli' !important;
+    }
+    
+    .THIS .leaderboardheading
+    {
+            color: #333333;
+    font-family: 'Muli';
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0px 0 20px 0;
+    text-transform: capitalize;
+    }
+    .THIS .clear
+	{
+  
+    }
+    .THIS .leaderboardrowwrapper
+    {
+        color: #333;
+        text-decoration: none;
+        font-weight: 300;
+        border-top: 1px solid #d4d4d4;
+    }
+    .THIS .btm{
+        border-bottom: 1px solid #d4d4d4;
+    }
+    .THIS .mar
+    {
+        margin-top:-10px;
+    }
+ .THIS .levelandpointscol
+    {
+        display:inline-block;
+    }
+    .THIS .comm-leaderboard__user-name
+    {
+    font-family: 'Muli';
+    font-size: 16px;
+    color: #0290b1;
+    }
+    .THIS .comm-leaderboard__level-name
+    {
+        font-size: 14px;
+    font-family: 'Muli';
+    color: #959ba1;
+    }
+    .THIS .comm-leaderboard__points-column
+    {
+        border: 2px solid #dddddd;
+    border-radius: 4px;
+    font-family: 'Muli';
+    font-size: 12px;
+    color: #404040;
+    width: 53px;
+    height: 42px;
+    }
+    .THIS .comm-leaderboard__points
+    {
+        color: #404040;
+        font-family: 'Muli';
+    }
+    .THIS .forcecommunityreputationleaderboard42
+    {
+        clear:both;
+    }
+    .THIS .forcecommunityrichtext
+    {
+            word-wrap: break-word;
+    }
+  .THIS .ccentrify_homecarousel
+    {
+        
+    }
+    .THIS .containertext
+    {
+        text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    }
+    .THIS .bg1
+    {
+        background-size:fit;
+    }
+    .THIS a:hover
+    {
+        text-decoration:none;
+    }
+    .THIS .slideshow-container
+    {
+            position: relative;
+    margin: auto;
+    }
+    .THIS .active
+    {
+        -webkit-transition: -webkit-transform 1s ease-in-out;
+    -o-transition: -o-transform ease-in-out;
+    display: block;
+    }
+    .THIS .containertext
+    {
+            text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    }
+    .THIS .bg1
+    {
+       background-repeat: round;
+    background-size: cover; 
+    }
+    .THIS .titletext
+    {
+            width: 80%;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 22px;
+    padding: 10px 0 0 0;
+    color: #ae0000;
+    }
+    .THIS .titlehead
+    {
+        color: #ae0000;
+    font-size: 31px;
+    font-weight: 600;
+    text-align: center;
+    padding: 5px 0 0 0;
+    line-height: 1.6;
+    margin: 0 auto;
+            padding-left: 136px;
+
+    }
+    .THIS .carousel_btn_div 
+    {
+            padding: 25px 0;
+            margin-top: -74px;
+    margin-left: 74px;
+    }
+    .THIS .learn_btn
+    {
+        border: 2px solid #ae0000;
+    background: #ae0000;
+    color: #fff!important;
+    padding: 9px 44px;
+    font-size: 20px;
+    font-weight: bold
+    }
+    .THIS .dotsdiv
+    {
+        position: absolute;
+    text-align: center;
+    bottom: 18px;
+    float: none;
+    width: 100%;
+    }
+    .THIS .activedot
+    {
+        background-color: #ae0000;
+    }
+    .THIS .dot
+    {
+            cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease;
+    }
+    .THIS .dot:hover
+    {
+    background-color: #ae0000;
+}
+    .THIS .dot:active
+    {
+      background-color: #ae0000;
+        transition: background-color .6s ease;
+    }
+    .THIS .dot:focus
+    {
+      background-color: #ae0000;  
+    }
+    .THIS .Heading
+    {
+        font-size: 16px;
+    font-weight: bold;
+    color: #ae0000;
+    padding: 10px;
+    font-family: 'Muli',sans-serif;
+    text-align: -webkit-center;
+    }
+    .THIS .sbheading
+    {
+        color: #212121;
+    font-size: 32px;
+    font-family: 'Muli',sans-serif;
+    text-align: -webkit-center;
+    line-height: 1.25;
+    }
+    .THIS .margin
+    {
+        margin: 0 auto;
+    }
+    .THIS .caraousel_btn_div
+    {
+            padding: 25px 0;
+    }
+    .THIS .tourbox
+    {
+            margin-bottom: 106px;
+    margin-top: 30px;
+    }
+    .THIS .techcenter
+    {
+        padding-left: 46px;
+    margin-right: 20px;
+    }
+    .THIS .width
+    {
+        width: 138%
+    }
+    .THIS .twittercomponent
+    {
+        padding-left: 8px;
+        margin-left: 5%;
+    }
+    .THIS .spacing
+    {
+        padding: 10px;
+    }
+    .THIS .heading2
+    {
+        color: #ae0000;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Muli',sans-serif;
+    padding: 0 0 10px 0;
+    }
+    .THIS .borderiframe
+    {
+            width: 100%;
+    height: 300px;
+    border-radius: 4px;
+    background-color: #0290b1;
+    position: relative;
+    padding: 10px;
+    }
+    .THIS .foot
+    {
+            margin-top: 60px;
+    }
+    .THIS .outerdivs1
+    {
+            color: #ffffff;
+    font-family: 'Muli',sans-serif;
+    padding: 0 5%;
+    background: #3b3b3b;
+    margin: auto;
+    }
+    .THIS .tilesdiv
+{
+            border-bottom: 1px solid rgba(239, 239, 239, 0.5);
+    padding: 50px 0 50px 0;
+    }
+    .THIS .paddleftright
+    {
+            padding-left: 20px;
+    padding-right: 30px;
+    }
+    .THIS .margintop10
+    {
+        
+    }
+    .THIS .contactmailicon
+    {
+            border-radius: 3px;
+    width: 37px;
+    height: 20px;
+    border: none;
+    padding-right: 10px;
+    margin-left: 8px;
+    }
+    .THIS .contactpadding
+    {
+        padding-right: 32px;
+    color: #fff;
+    }
+    .THIS .shiftright
+    {
+        text-align: right;
+            margin-top: -7px;
+
+    }
+    .THIS .basicpadding
+    {
+            padding-right: 20px;
+    }
+    .THIS .socialicons
+    {
+            border-radius: 5px;
+    width: 28px;
+    height: 28px;
+    border: none;
+    }
+    .THIS .outerdivs1
+    {
+            color: #ffffff;
+    font-family: 'Muli',sans-serif;
+    padding: 0 5%;
+    background: #3b3b3b;
+    margin: auto;
+    }
+    .THIS .footerlists
+    {
+        width: 100%;
+    }
+    .THIS .margintop1
+    {
+        margin-top:25px;
+        width:100%;
+    }
+    .THIS .footerliheading
+    {
+        font-size: 13px;
+    color: #f3f2f2;
+    font-family: 'Muli',sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    }
+    .THIS .listmargin
+    {
+        margin-top:10px;
+    }
+    .THIS .margintop2
+    {
+            margin-top: 24px;
+        width: 15%;
+    }
+    .THIS .pdetails1
+    {
+        font-family: 'Muli',sans-serif;
+    font-size: 12px;
+    color: #6b6b6b;
+    color: rgba(239, 239, 239, 0.5);
+    font-weight: bold;
+    vertical-align: middle;
+    }
+    .THIS .paddtop25
+    {
+        padding-right:25px;
+    }
+
+    
+}

@@ -1,0 +1,41 @@
+<template>
+    <div class="slds-form-element slds-size_5-of-7">
+        <div class="slds-form-element">
+            <label class="slds-form-element__label" for="text-input-id-1">Search Contact</label>
+            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right">
+            <div class="slds-icon  slds-input__icon slds-input__icon_left slds-icon-text-default iconcontainer" aria-hidden="true">
+                <lightning-icon size="x-small" icon-name="utility:search" alternative-text="Approved" ></lightning-icon>
+            </div>
+            <input type="text" data-id="clear" class="slds-input clear" value={searchtext} onkeyup={search}/>
+            <button class="slds-button slds-button_icon slds-input__icon slds-input__icon_right" title="Clear" onclick={clearvalues}>
+            <div class="slds-button__icon slds-icon-text-light" aria-hidden="true" >
+                <lightning-icon size="x-small" icon-name="utility:close" alternative-text="Approved"  ></lightning-icon>
+            </div>
+            <span class="slds-assistive-text">Clear</span>
+            </button>
+            </div>
+            </div>
+        <div data-id="toastModel" id="listbox-id-4" class="slds-size_7-of-7 slds-hidden slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid" role="listbox">
+        <ul class="slds-listbox slds-listbox_vertical " role="presentation">
+            <div style="border-radius:5px;background-color:white;">
+            <template for:each={contacts.data} for:item="contact">
+        <li role="presentation" class="slds-listbox__item" data-name={contact.Name} data-id={contact.Id} key={contact.Id} onclick={selectvalue} style="border-radius:25px;">
+        <div class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta item-text" role="option">
+        <span class="slds-media__figure slds-listbox__option-icon">
+        <span class="slds-icon_container slds-icon-standard-account">
+        <lightning-icon icon-name="standard:contact" alternative-text="Approved" ></lightning-icon>
+        </span>
+        </span>
+        <span class="slds-media__body">
+        <span class="slds-listbox__option-text slds-listbox__option-text_entity">
+        <span>{contact.Name}</span>
+        </span>
+        </span>
+        </div>
+        </li>
+        </template>
+    </div>
+        </ul>
+        </div>
+        </div>
+    </template>

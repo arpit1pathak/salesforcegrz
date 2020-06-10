@@ -1,0 +1,8 @@
+<apex:page standardController="Position__c" recordsetVar="Positions">
+    <apex:pageBlock title="All positions">
+        <apex:pageBlockTable value="{!Positions}" var="pos">
+            <apex:column headervalue="Name" value="{!pos.name}"/>
+             <apex:column headervalue="Status" value="{!pos.Status__c}"/>
+    </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

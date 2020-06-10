@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	  <lightning:buttonMenu aura:id="menu" onselect="{! c.handleSelect }" alternativeText="Show menu" iconname="utility:rows">
+        <lightning:menuItem value="MenuItemOne" label="Menu Item One" />
+        <lightning:menuItem value="MenuItemTwo" label="Menu Item Two" />
+        <lightning:menuItem value="MenuItemThree" label="Menu Item Three" disabled="true" />
+        <lightning:menuItem value="MenuItemFour" label="Menu Item Four" />
+    </lightning:buttonMenu>
+</aura:component>

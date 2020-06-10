@@ -1,0 +1,15 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+ <aura:attribute name="title" type="String" default="Community Component"/>
+    <lightning:card>
+        <aura:set attribute="title">
+            <lightning:icon iconName="utility:connected_apps" size="small"/>
+            {!v.title}
+        </aura:set>
+        <aura:set attribute="footer">
+            <lightning:badge label="View"/>
+            <lightning:badge label="Edit"/>
+            <lightning:badge label="Delete"/>
+        </aura:set>
+        Lightning Community Page
+    </lightning:card>	
+</aura:component>

@@ -1,0 +1,13 @@
+<apex:page controller="Addcustomer">
+    <apex:form >
+    <apex:pageblock title="Enter Customer Details">
+        <apex:pageBlockSection title="Add customer" collapsible="false">
+       Name: <apex:inputText value="{!custname}"/>
+           Address: <apex:inputText value="{!custaddress}"/>
+               Email: <apex:inputText value="{!custEmail}"/> 
+                  Contact: <apex:inputText value="{!custcontact}"/> 
+                       <apex:commandButton value="Save" action="{!Save}"/>
+                       </apex:pageBlockSection>
+    </apex:pageblock>
+    </apex:form>
+</apex:page>

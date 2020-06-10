@@ -1,0 +1,246 @@
+<template>
+	<div class="c-container">
+		<lightning-layout multiple-rows="true">
+			<lightning-layout-item padding="horizontal-small" size="12">
+				<div class="page-section page-header slds-text-heading_medium">
+                        Approvals
+                    </div>
+			</lightning-layout-item>
+			<lightning-layout-item  padding="horizontal-medium" size="12">
+				<lightning-layout>
+					<lightning-layout-item size="3">
+						<div class="page-section page-right">
+							<div class="slds-p-around_medium lgc-bg">
+								<lightning-input type="text" label="Search By Approval" placeholder="Enter Approval Rule" onupdate={onkeyup}  onkeyup={searchByApprovals} ></lightning-input>
+							</div>
+						</div>
+					</lightning-layout-item>
+					<lightning-layout-item size="3">
+						<div class="page-section page-main">
+							<div class="slds-p-around_medium lgc-bg">
+								<lightning-combobox
+                                    label="Assignee Type" placeholder="Select Assignee Type"
+                                    value={value}
+                                    name="Type"
+                                    options={typefields}
+                                    onchange={handleChange} ></lightning-combobox>
+							</div>
+						</div>
+					</lightning-layout-item>
+					<lightning-layout-item size="3">
+						<div class="page-section page-right">
+							<div class="slds-p-around_medium usersType lgc-bg slds-show">
+								<lightning-input type="text" label="Assignee Name" value={inputValue} placeholder={usersType} onchange={searchOnInput} disabled={disabled}></lightning-input>
+							</div>
+							<div class="slds-p-around_medium assigneName lgc-bg slds-hide">
+								<lightning-combobox 
+									value={value}
+									label="Assignee Name" 
+									placeholder={usersType}
+									options={fields}
+									onchange={onValueSelection}></lightning-combobox>
+							</div>
+						</div>
+					</lightning-layout-item>
+					<lightning-layout-item size="3">
+					</lightning-layout-item>
+				</lightning-layout>
+			</lightning-layout-item>
+		</lightning-layout>
+		<div  class="d-container slds-scrollable_y" >
+			<ul class="slds-accordion">
+				<template if:true={apRecords}>
+					<template for:each={apRecords} for:item="approvals">
+						<li class="slds-accordion__list-item" key={approvals.approvalId}>
+							<section class="slds-accordion__section" data-id={approvals.approvalId}>
+								<div class="slds-accordion__summary">
+									<h3 class="slds-accordion__summary-heading">
+										<button aria-controls="accordion-details-01" aria-expanded="true" class="slds-button slds-button_reset slds-accordion__summary-action">
+											<lightning-icon  class="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true" icon-name="utility:switch" size="xx-small" onclick={getEntries}></lightning-icon>
+											<span class="slds-truncate" title={approvals.approvalName} data-id={approvals.approvalId} onclick={getEntries}>{approvals.approvalName}</span>
+										</button>
+									</h3>
+								</div>
+								<div class="slds-accordion__content">
+									<table  class="slds-table slds-table_cell-buffer slds-table_bordered">
+										<thead>
+											<tr class="slds-line-height_reset">
+												<th class="" scope="col">
+													<div class="slds-truncate" title="SEQUENCE">SEQUENCE</div>
+												</th>
+												<th class="" scope="col">
+													<div class="slds-truncate" title="LABEL">LABEL</div>
+												</th>
+												<th class="" scope="col">
+													<div class="slds-truncate" title="CONDITION">CONDITION</div>
+												</th>
+												<th class="" scope="col">
+													<div class="slds-truncate" title="CRITERIA">CRITERIA</div>
+												</th>
+												<th class="" scope="col">
+													<div class="slds-truncate" title="DESCRIPTION">DESCRIPTION</div>
+												</th>
+												<th class="" scope="col">
+													<div class="slds-truncate" title="DEPENDS ON">DEPENDS ON</div>
+												</th>
+												<th style="border-right: none;" scope="col" >
+													<div class="slds-truncate " title="ASSIGNEE DATA">ASSIGNEE DATA</div>
+												</th>
+											</tr>
+										</thead>
+										<template if:true={approvals.entries}>
+											<tbody>
+												<template for:each={approvals.entries} for:item="entrys">
+													<tr class="slds-hint-parent" key={entrys.Id}>
+														<th data-label="SEQUENCE" scope="row">
+															<div class="slds-truncate" title="SEQUENCE">{entrys.Apttus_Approval_Sequence__c}</div>
+														</th>
+														<td data-label="Entry Label">
+															<div class="slds-truncate" title="LABEL">{entrys.Apttus_Approval_EntryLabel__c}</div>
+														</td>
+														<td data-label="Description">
+															<div class="slds-truncate" title="Description">{entrys.Apttus_Approval_Description__c}</div>
+														</td>
+														<td data-label="Depends On">
+															<div class="slds-truncate" title="CRITERIA">{entrys.Apttus_Approval_AutoReapprovalCriteria__c}</div>
+														</td>
+														<td data-label="Notify Only">
+															<div class="slds-truncate" title="DESCRIPTION">{entrys.Apttus_Approval_Description__c}</div>
+														</td>
+														<td data-label="Send Email">
+															<div class="slds-truncate" title="DEPENDS ON">{entrys.Apttus_Approval_DependsOn__c}</div>
+														</td>
+														<td data-label="Description" style="border-right: none;">
+															<div class="slds-truncate" title="ASSIGNEE DATA">
+																<a data-id={entrys.Id} onclick={onView}>View</a>
+															</div>
+														</td>
+													</tr>
+												</template>
+											</tbody>
+										</template>
+									</table>
+								</div>
+							</section>
+						</li>
+					</template>
+				</template>
+			</ul>
+		</div>
+		
+	</div>
+	<footer class="slds-modal__footer footers" >
+		<lightning-layout multiple-rows="true">
+			<lightning-layout-item size="2">
+				<span>Page No : &nbsp; {pageNo} &nbsp;of &nbsp;:&nbsp;{rows}</span>
+			</lightning-layout-item>
+			<lightning-layout-item size="8">
+				<div class="slds-button-group buttongroup slds-p-around_medium slds-align_absolute-center" role="group">
+					<button class="slds-button slds-button_neutral buttons pre" disabled onclick={prePage}>
+						<lightning-icon  class="slds-button__icon slds-button__icon_left" icon-name="utility:chevronleft" size="xx-small"></lightning-icon>
+						Previous
+					</button>
+					<button class="slds-button slds-button_neutral buttons first" disabled onclick={firstPage}>
+						<lightning-icon  class="slds-button__icon slds-button__icon_left" icon-name="utility:chevronleft" size="xx-small"></lightning-icon>
+						First Page</button>
+					<button class="slds-button slds-button_neutral buttons last" onclick={lastPage}>
+						Last Page
+						<lightning-icon  class="slds-button__icon slds-button__icon_right" icon-name="utility:chevronright" size="xx-small"></lightning-icon>
+						
+					</button>
+					<button class="slds-button slds-button_neutral nxt buttons" onclick={nextPage}>
+						Next Page<lightning-icon  class="slds-button__icon slds-button__icon_right" icon-name="utility:chevronright" size="xx-small"></lightning-icon>
+						</button>
+				  </div>
+			</lightning-layout-item>
+			<lightning-layout-item size="1">Rows :</lightning-layout-item>
+			<lightning-layout-item size="1">
+				<div class="slds-dropdown-trigger selectRows slds-dropdown-trigger_click">
+				<select class="slds-select" onchange={handleSize}>
+				<option value="2">2</option>
+				<option value="4" selected>4</option>
+				<option value="6">6</option>
+				<option value="8">8</option>
+				<option value="10">10</option>
+				</select> 
+				</div>
+			</lightning-layout-item>
+		</lightning-layout>
+	</footer>
+	<template if:true={show}>
+		<section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+			<div class="slds-modal__container">
+				<header class="slds-modal__header">
+					<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" onclick={onClose} title="Close">
+						<lightning-icon icon-name="utility:close" variant="inverse" size="small"></lightning-icon>
+					</button>
+					<h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">ASSIGNEE DATA</h2>
+				</header>
+				<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+					<table class="slds-table slds-table_cell-buffer slds-table_bordered">
+						<thead>
+							<tr class="slds-line-height_reset">
+								<th class="" scope="col">
+									<div class="slds-truncate" title="SEQUENCE">SEQUENCE</div>
+								</th>
+								<th class="" scope="col">
+									<div class="slds-truncate" title="TYPE">TYPE</div>
+								</th>
+								<th class="" scope="col">
+									<div class="slds-truncate" title="VALUE">VALUE</div>
+								</th>
+								<th class="" scope="col">
+									<div class="slds-truncate" title="DEPENDS ON">DEPENDS ON</div>
+								</th>
+								<th class="" scope="col">
+									<div class="slds-truncate" title="NOTIFY ONLY">NOTIFY ONLY</div>
+								</th>
+								<th class="" scope="col">
+									<div class="slds-truncate" title="SEND EMAIL">SEND EMAIL</div>
+								</th>
+								<th style="border-right: none;" scope="col" >
+									<div class="slds-truncate " title="DESCRIPTION">DESCRIPTION</div>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<template for:each={assigneeRecords} for:item="ass">
+								<tr class="slds-hint-parent" key={ass.Id}>
+									<th data-label="SEQUENCE" scope="row">
+										<div class="slds-truncate" title="SEQUENCE"> {ass.Apttus_Approval_Sequence__c}</div>
+									</th>
+									<td data-label="TYPE">
+										<div class="slds-truncate" title="TYPE">{ass.Apttus_Approval_AssigneeType__c}</div>
+									</td>
+									<td data-label="VALUE">
+										<div class="slds-truncate" title="VALUE">{ass.Apttus_Approval_AssigneeValue__c}</div>
+									</td>
+									<td data-label="DEPENDS ON">
+										<div class="slds-truncate" title="DEPENDS ON">{ass.Apttus_Approval_DependsOn__c}</div>
+									</td>
+									<td data-label="NOTIFY ONLY">
+										<div class="slds-truncate" title="NOTIFY ONLY">
+											<lightning-input type="checkbox" disabled checked={{ass.Apttus_Approval_NotifyOnly__c}}></lightning-input>
+										</div>
+									</td>
+									<td data-label="SEND EMAIL">
+										<div class="slds-truncate" title="SEND EMAIL">
+											<lightning-input type="checkbox" disabled checked={{ass.Apttus_Approval_SendEmail__c}}></lightning-input>
+										</div>
+									</td>
+									<td data-label="DESCRIPTION" style="border-right: none;">
+										<div class="slds-truncate" title="DESCRIPTION">{ass.Apttus_Approval_AssigneeDescription__c}</div>
+									</td>
+								</tr>
+							</template>
+						</tbody>
+					</table>
+				</div>
+				<footer class="slds-modal__footer">
+					<button class="slds-button slds-button_neutral buttons" onclick={onClose}>Cancel</button>
+				</footer>
+			</div>
+		</section>
+		<div class="slds-backdrop slds-backdrop_open"></div>
+	</template>
+</template>

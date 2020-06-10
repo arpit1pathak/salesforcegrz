@@ -1,0 +1,13 @@
+.slds-input__icon_left
+{
+    margin-top: -8px;
+    margin-left: -4px;
+}
+.iconcontainer svg
+{
+    width:2%;
+    height:2%;
+}
+.item-text:hover {
+    color: #2693ff;
+  }

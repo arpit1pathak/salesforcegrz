@@ -1,0 +1,9 @@
+<apex:page standardController="Position__c">
+    <apex:pageBlock title="Candidate Detail">
+        <apex:pageBlockSection title="Candidate info" columns="1">
+            <apex:detail relatedList="false">
+                <apex:relatedList List="Candidates__r"/>
+            </apex:detail>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

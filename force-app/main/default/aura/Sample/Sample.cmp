@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction">
+<div class="demo-only">
+  <div class="slds-hidden">I am hidden</div>
+  <div class="slds-visible">I am visible</div>
+</div>
+</aura:component>

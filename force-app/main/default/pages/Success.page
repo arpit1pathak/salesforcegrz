@@ -1,0 +1,5 @@
+<apex:page >
+    <apex:pageBlock Title="Record Status">
+       Record has been saved successfully
+    </apex:pageBlock>
+</apex:page>

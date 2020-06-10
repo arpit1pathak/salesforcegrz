@@ -1,0 +1,10 @@
+<apex:page standardController="Lead">
+    <apex:pageBlock title="Lead Detail">
+        <apex:pageBlockSection title="Lead info">
+            Lead Name: {!Lead.name}<br/>
+            Lead Source: {!Lead.leadsource}<br/>
+            Lead Rating:{!Lead.Rating}<br/>
+            Lead Status:{!Lead.Status}<br/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

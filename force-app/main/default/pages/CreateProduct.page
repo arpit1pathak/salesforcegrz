@@ -1,0 +1,17 @@
+<apex:page controller="Addcustomer">
+    <apex:form >
+    <apex:pageblock title="Create Product">
+        <apex:pageBlockSection title="Add Product" collapsible="false">
+       Product Name: <apex:inputText value="{!prodname}"/>
+           Brand: <apex:inputText value="{!prodbrand}"/>
+               Price: <apex:inputText value="{!prodprice}"/> 
+                  Category: <apex:selectList size="1" value="{!categid}">
+            <apex:selectOptions value="{!category}"/>
+    </apex:selectList>  
+            Model Number: <apex:inputText value="{!prodmodel}"/>
+                       <apex:commandButton value="Save" action="{!Save1}"/>
+            <apex:commandButton value="Cancel" action="{!Cancel}"/>
+                       </apex:pageBlockSection>
+    </apex:pageblock>
+    </apex:form>
+</apex:page>

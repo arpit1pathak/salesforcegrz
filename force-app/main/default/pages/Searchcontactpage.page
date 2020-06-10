@@ -1,0 +1,26 @@
+<apex:page controller="Ctrl_ContactSearch">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Search" action="{!searchContacts}"  />
+            </apex:pageBlockButtons>
+	        <apex:pageBlockSection id="contact-table" columns="1">
+	            <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Name" />
+                    <apex:inputText value="{!name}" />
+	            </apex:pageBlockSectionItem>
+                <apex:pageBlockTable value="{!contacts}" var="c" id="ab">
+                    <apex:column >
+<apex:commandbutton value="Edit"/><apex:commandLink value="{!c.name}" reRender="abc"><apex:commandLink value="Delete" action="{!deletecontacts}">
+                        <apex:param value="{!c.id}" name="id" />
+                                </apex:commandLink>
+                        </apex:commandLink>
+                    </apex:column>
+                </apex:pageBlockTable>
+	        </apex:pageBlockSection>
+	    </apex:pageBlock>
+        </apex:form><!--
+         <apex:pageblock id="abc"> 
+        <apex:detail subject="{!$CurrentPage.parameters.id}" relatedList="false"/>
+		</apex:pageblock><> -->
+</apex:page>

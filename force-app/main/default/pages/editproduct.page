@@ -1,0 +1,20 @@
+<apex:page controller="Addcustomer" extensions="controllerofviewpage">
+    <apex:form >
+        <apex:pageBlock title="Product Page" id="PB1" mode="edit">
+                Select Product:<apex:selectList size="1" value="{!prodid}">
+                <apex:selectOptions value="{!Options}"></apex:selectOptions>
+                    <apex:actionSupport event="onchange" reRender="PB2" />
+            </apex:selectList>
+               </apex:PageBlock>
+        <apex:pageBlock title="Product Details" id="PB2">
+            <apex:pageBlockTable value="{!prod1}" var="pr">
+                 <apex:column ><apex:inputField value="{!pr.Name}"/></apex:column>
+                  <apex:column ><apex:inputField value="{!pr.Brand__c}"/></apex:column>
+                 <apex:column ><apex:inputField value="{!pr.Categories__c}"/></apex:column>
+                <apex:column ><apex:inputField value="{!pr.Model_Number__c}"/></apex:column>
+                <apex:column ><apex:inputField value="{!pr.Price__c}"/></apex:column>
+</apex:pageBlockTable>
+            <apex:commandButton value="update" action="{!save2}"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

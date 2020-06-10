@@ -1,0 +1,42 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="popup" >
+   <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="attr" type="Boolean" default="true"/>
+    <aura:attribute name="displaycontact" type="list"/>
+    
+    <aura:attribute name="contactId" type="String"/>
+ 	<section aria-labelledby="panel-heading-id" class="slds-popover slds-popover_panel  slds-popover_small  slds-nubbin_left-top" role="dialog">
+<button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small slds-float_right slds-popover__close" title="Close dialog">
+<span class="slds-assistive-text">Close dialog</span>  
+</button>
+        
+<div class="slds-popover__header">
+    <aura:iteration items="{!v.displaycontact}" var="con">
+<header class="slds-media slds-media_center slds-m-bottom_small">
+<span class="slds-icon_container slds-icon-standard-account slds-media__figure">
+<lightning:icon iconName="standard:contact" alternativeText="Approved" />
+</span>
+<div class="slds-media__body">
+<h2 class="slds-text-heading_medium slds-hyphenate" id="panel-heading-id">
+<a href="javascript:void(0);">{!con.Name}</a>
+</h2>
+</div>
+</header>
+<footer class="slds-grid slds-wrap slds-grid_pull-padded">
+<div class="slds-p-horizontal_small slds-size_1-of-2 ">
+<p class="slds-popover_panel__label" title="Title">{!con.title}</p>
+<p class="slds-popover_panel__label" title="Account Owner">{!con.Email}</p>
+</div>
+<div class="slds-p-horizontal_small slds-size_1-of-2">
+<p class="slds-popover_panel__label slds-truncate" title="Phone"></p>
+<a href="javascript:void(0);">212-345-3485</a>
+</div>
+<div class="slds-grid">    
+<div class="slds-p-horizontal_small slds-size_1-of-2 ">
+<p class="slds-popover_panel__label slds-truncate" title="Website">{!con.Phone}</p>
+</div>
+    </div>
+</footer>
+        </aura:iteration>
+</div>
+        </section>
+</aura:component>

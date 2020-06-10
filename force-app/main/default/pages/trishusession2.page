@@ -1,0 +1,26 @@
+<apex:page controller="trishusession1controller">
+ <apex:form >
+ <apex:pageBlock >
+  <apex:pageBlockTable value="{!accList}" var="a">
+  <apex:column >
+  <apex:outputPanel rendered="{!outputviewer}"> 
+  <apex:commandLink value="Delete"/>
+  <apex:commandButton value="Edit" action="{!editer}"/>
+  </apex:outputPanel>
+  </apex:column>
+  <apex:column id="test">
+  <apex:outputPanel rendered="{!outputviewer}" > 
+  <apex:outputtext value="{!a.name}"/>
+  </apex:outputpanel>
+  <apex:outputPanel rendered="{!inputviewer}"> 
+  <apex:inputtext value="{!a.name}"/>
+  <apex:commandButton value="Save" action="{!Save}"/>
+  <apex:commandButton value="Cancel" action="{!Cancel}"/>
+  </apex:outputpanel>
+  </apex:column>
+  </apex:pageBlockTable>
+ </apex:pageBlock>
+ 
+ </apex:form>
+ 
+</apex:page>

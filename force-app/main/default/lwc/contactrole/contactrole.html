@@ -1,0 +1,96 @@
+<template >
+    <article class="slds-card slds-tabs_card slds-card_boundary slds-tabs_card slds-tabs_card slds-card_boundary slds-card-wrapper slds-card_boundary">
+        <div class="slds-card__header slds-grid" >
+        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+        <div class="slds-media__figure">
+        <span class="slds-icon_container slds-icon-standard-contact" title="contact">
+        <div class="slds-icon slds-icon_small" aria-hidden="true">
+            <lightning-icon icon-name="standard:contact" alternative-text="Approved" ></lightning-icon>
+        </div>
+        <span class="slds-assistive-text">contact</span>
+        </span>
+        </div>
+        <div class="slds-media__body">
+        <h2 class="slds-card__header-title">
+        <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Contacts (1)">
+        <span>Contact Roles</span>
+        </a>
+        </h2>
+        </div>
+        <div class="slds-no-flex">
+        <button class="slds-button slds-button_neutral" onclick={openothercomponent} >New</button>
+<template if:true={showmodal} >
+    <c-newcontactrole onsaveaccountsrole={saveAccounts} onclosemodal={closemodal} accid={recordId} ></c-newcontactrole>
+</template>
+<template if:true={showmodal2} >
+    <c-newcontactrole conname={contactname} role={role} editrecordid={editId} accid={recordId} conid={contactsId} onsaveaccountsrole={saveAccounts} onclosemodal={closemodal1} isprimary={isprimary}></c-newcontactrole>
+</template>
+        </div>
+        </header>
+        </div>
+        <div class="slds-card__body">
+        <table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered slds-table_fixed-layout" role="grid">
+        <thead>
+        <tr class="slds-line-height_reset">
+        <th class="" scope="col">
+        <div class="slds-truncate" >Action</div>
+        </th>
+        <th class="" scope="col">
+        <div class="slds-truncate" >Contact Name</div>
+        </th>
+        <th class="" scope="col">
+        <div class="slds-truncate" >Account Name</div>
+        </th>
+        <th class="" scope="col">
+        <div class="slds-truncate" >Email</div>
+        </th>
+        <th class="" scope="col">
+        <div class="slds-truncate" >Phone</div>
+        </th>
+        <th class="" scope="col">
+        <div class="slds-truncate" >Role</div>
+        </th>
+        <th class="slds-truncate" scope="col">
+            <div class="slds-truncate">Is Primary</div>
+            </th>
+        </tr>
+        </thead>
+        <tbody>   
+            <template for:each={contactroles.data} for:item="roles">
+        <tr class="slds-hint-parent" data-id={roles.getRoles.Id} key={roles.getRoles.Id}>
+            <td role="gridcell">
+                <div class="slds-truncate" >
+                <span ><a><lightning-icon size="x-small" icon-name="utility:edit" data-id={roles.getRoles.Id} onclick={recordEdit}></lightning-icon></a></span>
+                <span style="margin-left:10px;" data-id={roles.getRoles.Id} onclick={deletecontactrole} ><a><lightning-icon size="x-small" data-id={roles.getRoles.Id} icon-name="utility:delete"></lightning-icon></a></span>
+                </div>
+                </td>
+        <th scope="row">
+        <div class="slds-truncate">
+        <a data-id={roles.getRoles.Contact.Id} onclick={contactpage} target="_blank">{roles.ContactName}</a>
+        </div>
+        </th>
+        <td role="gridcell">
+        <div class="slds-truncate"><a data-id={roles.getRoles.Contact.AccountId} onclick={accountpage} >{roles.AccountName}</a></div>
+        </td>
+        <td role="gridcell">
+        <div class="slds-truncate" >{roles.getRoles.Contact.Email}</div>
+        </td>
+        <td role="gridcell">
+        <div class="slds-truncate">{roles.getRoles.Contact.Phone}</div>
+        </td>
+        <td role="gridcell">
+        <div class="slds-truncate">{roles.getRoles.Role}</div>
+        </td>
+        <td role="gridcell">
+        <lightning-input type="checkbox" disabled checked={roles.getRoles.IsPrimary} style="margin-left: 28px;"> </lightning-input>
+        </td>
+        </tr>
+    </template>
+        </tbody>
+        </table>
+        </div>
+        <footer class="slds-card__footer">
+        <span class="slds-assistive-text">Contacts</span>
+        </footer>
+        </article>
+</template>

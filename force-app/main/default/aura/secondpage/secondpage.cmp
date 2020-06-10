@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+<aura:attribute name="search" type="String"/>    
+<ui:inputText aura:id="name" label="Enter Name:" placeholder="Your Name" value="{!v.search}" />
+<ui:button aura:id="button" buttonTitle="Click to see what you put into the field" class="button" label="Click me" press="{!c.onclik}"/>
+	<ui:outputText aura:id="outName" value="" class="text"/>
+    {!v.search}
+</aura:component>

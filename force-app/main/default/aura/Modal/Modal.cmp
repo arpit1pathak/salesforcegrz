@@ -1,0 +1,39 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="Modal" >
+    <aura:attribute name="attr" type="Boolean" default="false"/>    
+    <aura:attribute name="subject" type="String"/>
+     <aura:attribute name="options" type="List" default="[
+    {'label': 'Not Started', 'value': 'Not Started'},
+    {'label': 'In Progress', 'value': 'In Progress'},
+    {'label': 'Waiting on someone else', 'value': 'Waiting on someone else'},
+    {'label': 'Deferred', 'value': 'Deferred'}                                                     
+                                                         
+    ]"/>
+    <aura:attribute name="value" type="String" default="Not Started"/>
+    <aura:attribute name="val" type="String"/>
+    <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_small" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+<div class="slds-modal__container">
+<header class="slds-modal__header">
+<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+<span class="slds-assistive-text">Close</span>
+</button>
+<h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Choose a Status</h2>
+</header>
+<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+<div class="slds-col slds-size--1-of-3 slds-text-align--left">
+<legend class="slds-form-element__legend slds-form-element__label">Select a Status</legend> 
+</div>
+    <div class="slds-col slds-size--2-of-3" style="margin-left:300px;">
+ <lightning:radioGroup onchange="{!c.myvalue}" name="radioGroup"
+                          options="{! v.options }"
+                          value="{! v.value }"
+                          type="radio"/>
+    </div>
+</div>
+<footer class="slds-modal__footer">
+<button class="slds-button slds-button_neutral" onclick="{!c.cancelclick}">Cancel</button>
+<button class="slds-button slds-button_brand" onclick="{!c.saveclick}">Save</button>
+</footer>
+   
+</div>
+</section>
+</aura:component>

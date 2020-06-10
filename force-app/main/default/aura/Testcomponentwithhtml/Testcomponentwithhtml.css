@@ -1,0 +1,16 @@
+.THIS.test
+{
+    text-shadow: 3px 2px red;
+}
+
+.THIS .test1
+{
+    color:green;
+    font-style:bold;
+}
+
+.THIS .test2
+{
+   color:white;
+   font-style:bold;  
+}

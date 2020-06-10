@@ -1,0 +1,31 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+    <aura:attribute name="buttonLabel" type="String" default="Search Button" />
+    <aura:attribute name="newLabel" type="String" default="New Button" />
+    <aura:attribute name="isNewAvailable" type="Boolean" default="false"/>
+    <aura:attribute name="carTypes"  type="String[]" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}" />
+    <aura:handler name="render" value="{!this}" action="{!c.handlerender}" />
+    
+    <lightning:layout horizontalAlign="center">
+       <lightning:layoutItem padding="around-medium">
+         <lightning:select name='selectItem' aura:id="CarTypeList" label='All Types' variant="label-hidden" onchange="{!c.newvalueselected}" value="Sports Car">
+             <option value="" text="All Types" />
+             <aura:iteration items="{!v.carTypes}" var="carType">
+                 <option value="{!CarType}" text="{!carType}" />
+             </aura:iteration>
+           </lightning:select>
+        </lightning:layoutItem>
+             <lightning:layoutitem padding="around-medium">
+                 <lightning:button variant='neutral' label="Toggle Button" onclick="{!c.togglebutton}"/>
+           <lightning:button label="{!v.buttonLabel}" onclick="{!c.onSearchClick}" variant="brand" />
+             <aura:if isTrue="{!v.isNewAvailable}">
+     <lightning:button variant='neutral' label="{#v.newLabel}" />
+    <aura:set attribute="else">
+      New Button cannot be added here
+    </aura:set>
+  </aura:if> 
+        
+    </lightning:layoutitem>
+    </lightning:layout>
+</aura:component>

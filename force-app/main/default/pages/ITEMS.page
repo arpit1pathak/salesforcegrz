@@ -1,0 +1,14 @@
+<apex:page standardController="Account" recordSetVar="Accounts">
+    <apex:pageBlock title="All Accounts">
+        <apex:pageBlocktable value="{!Accounts}" var="acc">
+            <apex:column >
+                <apex:outputLink value="{!URLFOR($Action.Account.View,acc.id)}"> View </apex:outputLink>  &nbsp;
+                    <apex:outputLink value="{!URLFOR($Action.Account.Edit,acc.id)}"> Edit </apex:outputLink> &nbsp;
+                        <apex:outputLink value="{!URLFOR($Action.Account.Delete,acc.id)}"> Delete </apex:outputLink> &nbsp;
+            </apex:column>    
+            <apex:column headervalue="Name" value="{!acc.name}"/>   
+                        <apex:column headervalue="Account Type" value="{!acc.Type}"/>
+                        <apex:column headervalue="Account Industry" value="{!acc.Industry}"/>
+        </apex:pageBlocktable>
+        </apex:pageBlock>  
+</apex:page>

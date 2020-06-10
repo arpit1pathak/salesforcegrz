@@ -1,0 +1,19 @@
+<apex:page standardController="Contact" recordSetVar="con">
+    <apex:form >
+        <apex:pageBlock title="Contact Page">
+            <b>Select:</b>
+            <apex:selectList size="1" value="{!filterid}">
+                <apex:selectOptions value="{!listviewoptions}">
+                </apex:selectOptions>
+                <apex:actionSupport event="onchange" reRender="Pb1"/>
+                   </apex:selectList>
+        </apex:pageBlock>
+            <apex:pageBlock title="Contact Details" id="Pb1">
+                <apex:pageBlockTable value="{!con}" var="ac">
+                    <apex:column value="{!ac.name}"/>
+                    <apex:column value="{!ac.phone}"/>
+                    <apex:column value="{!ac.email}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlock>
+    </apex:form>
+</apex:page>

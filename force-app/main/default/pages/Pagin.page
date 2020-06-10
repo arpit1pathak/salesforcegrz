@@ -1,0 +1,36 @@
+<apex:page controller="CustomPaginationController" sidebar="false">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageMessages ></apex:pageMessages>
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!Search}" value="Search" />
+            </apex:pageBlockButtons>
+            <apex:pageblockSection >
+                <apex:inputText value="{!acc.Name}" label="Name"/> 
+                <apex:inputText value="{!acc.Phone}" label="Phone" />
+            </apex:pageblockSection>
+        </apex:pageBlock>
+        <apex:pageBlock id="resultId" rendered="{!if(lstAccount != null && lstAccount.size > 0, true,false )}">
+            <apex:pageBlockButtons >
+                <div style="text-align:right"> 
+                  Total Records Found: {!Con.resultSize}  
+      <apex:image url="/img/search_prevarrow_disabled.gif" styleClass="prevArrow" rendered="{!NOT(Con.HasPrevious)}"/>  
+      <apex:image url="/img/search_prevarrow.gif" title="Previous Page" styleClass="prevArrow" rendered="{!Con.HasPrevious}"/>  
+      <apex:commandLink action="{!Previous}" title="Previous Page" value="Previous Page" rendered="{!Con.HasPrevious}"/>  
+      <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOT(Con.HasPrevious)}">Previous Page</apex:outputPanel>           
+      <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOT(Con.HasNext)}">Next Page</apex:outputPanel>           
+      <apex:commandLink title="Next Page" value="Next Page" rendered="{!Con.HasNext}" action="{!Next}"/>&nbsp;  
+      <apex:image url="/img/search_nextarrow.gif" title="Next Page" styleClass="nextArrow" rendered="{!Con.HasNext}"/>  
+      <apex:image url="/img/search_nextarrow_disabled.gif" rendered="{!NOT(Con.HasNext)}"/> 
+      <img src="/s.gif" title="Last Page" alt="Last Page" class="last"/>         
+                </div>
+            </apex:pageBlockButtons>                
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockTable value="{!lstAccount}" var="acc" >
+                    <apex:column value="{!acc.Name}"/>
+                    <apex:column value="{!acc.Phone}"/>
+                </apex:PageblockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

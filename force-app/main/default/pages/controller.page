@@ -1,0 +1,19 @@
+<apex:page controller="Pageofleadcontroller">
+    <apex:Form >
+        <apex:pageBlock title="Lead Page" id="PB1">
+            <b>Select:</b>
+            <apex:selectList size="1" value="{!leadid}">
+                <apex:selectOptions value="{!Options}"></apex:selectOptions>
+                <apex:actionSupport event="onchange" reRender="PB2"/>
+            </apex:selectList>
+            </apex:pageBlock>
+        <apex:pageBlock title="Lead Details" id="PB2">
+            <apex:pageBlockTable value="{!leads}" var="ld">
+                <apex:column value="{!ld.name}"/>
+                <apex:column value="{!ld.LeadSource}"/>
+                <apex:column value="{!ld.Phone}"/>
+                <apex:column value="{!ld.email}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:Form>
+</apex:page>

@@ -1,0 +1,124 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="mytasks1" >
+    <aura:attribute name="title" type="string"/>  
+    <aura:attribute name="Task" type="list"/>  
+    <aura:attribute name="check" type="boolean"/>
+    <aura:attribute name="showModal" type="boolean" default="false"/> 
+    <aura:attribute name="subjectid" type="string"/>
+     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="popup" type="Boolean" default="false"/>
+    <aura:attribute name="contactId" type="String"/>
+    <aura:attribute name="subday" type="String"/>
+<article class="slds-card">
+<div class="slds-card__header slds-grid">
+<header class="slds-media slds-media_center slds-has-flexi-truncate">
+<div class="slds-media__figure">
+<span class="slds-icon_container slds-icon-standard-account" title="account">
+
+<span class="slds-assistive-text">account</span>
+</span>
+</div>
+<div class="slds-media__body">
+<h2 class="slds-card__header-title">
+<span style="margin-left:0px;font-weight:550;">{!v.title}</span>
+
+</h2>
+</div>
+<div class="slds-no-flex">
+<lightning:buttonMenu aura:id="menu" iconName="utility:filter" alternativeText="Show menu" onselect="{! c.handleSelect }">
+        <lightning:menuItem label="Today" value="MenuItemOne" />
+        <lightning:menuItem label="My Tasks" value="MenuItemTwo" />
+        <lightning:menuItem label="All Overdue" value="MenuItemThree"/>
+        <lightning:menuItem label="Completed Within Last 7 days" value="MenuItemFour" />
+    </lightning:buttonMenu>
+</div>
+</header>
+</div>
+     <aura:if isTrue="{!v.Task.length==0}">
+     <aura:if isTrue="{! v.title=='Today\'s Tasks'}">
+         <div class="slds-card__body slds-card__body_inner">
+             <div class="slds-grid slds-grid_vertical">
+                  <div class="slds-col slds-size_12-of-12 slds-align_absolute-center">
+                     <img src="https://arpitpathak-dev-ed.lightning.force.com/projRes/ui-home-private/emptyStates/noTasks.svg"/>
+                      
+             </div>
+                 <div class="slds-col slds-size_12-of-12 slds-align_absolute-center">
+                 <p>Nothing due today. Be a go-getter, and check back soon.</p>
+                 </div>
+         </div>
+         </div>
+         <aura:set attribute="else">
+         <div class="slds-card__body slds-card__body_inner">
+             <div class="slds-grid slds-grid_vertical">
+                  <div class="slds-col slds-size_12-of-12 slds-align_absolute-center">
+                     <img src="https://arpitpathak-dev-ed.lightning.force.com/projRes/ui-home-private/emptyStates/noTasks.svg"/>
+                      
+             </div>
+                 <div class="slds-col slds-size_12-of-12 slds-align_absolute-center slds-p-top_medium">
+                 <p class="slds-text-align_center">You don’t have any tasks in this list. Look in a different list, or create a task.</p>
+                     
+                 
+                 </div>
+         </div>
+         </div>
+          </aura:set>
+         </aura:if>
+         <aura:set attribute="else">
+<div class="slds-card__body slds-card__body_inner">
+    <div class="slds-grid slds-wrap">
+        <aura:iteration items="{!v.Task}" var="sub">    
+      <div class="slds-col slds-size_1-of-12">
+          <aura:if isTrue="{!sub.checkstatus}">
+          <input type="checkbox" id="{!sub.getTask.Id}" value="{!sub.checkstatus}" checked="true" onchange="{!c.onCheck}"/>
+          <aura:set attribute="else">
+          <input type="checkbox" id="{!sub.getTask.Id}" value="{!sub.checkstatus}" checked="false" onchange="{!c.onCheck}"/>
+          </aura:set>
+          </aura:if>
+          </div>  
+            <div class="slds-col slds-size_3-of-12">
+            <aura:if isTrue="{!sub.checkstatus}">
+          <span style="font-size:15px;"><a href="{!'/lightning/r/Contact/' + sub.getTask.Id + '/view'}" style="text-decoration:line-through;color:black" id="{!sub.getTask.Id+'tag'}" >{!sub.getTask.Subject}</a>
+       
+                </span>
+          <aura:set attribute="else">
+          <span style="font-size:15px;"><a href="{!'/lightning/r/Contact/' + sub.getTask.Id + '/view'}" style="color:black;text-decoration:none;" id="{!sub.getTask.Id+'tag'}"> {!sub.getTask.Subject}</a></span>
+          </aura:set>
+          </aura:if>
+          </div> 
+  <div class="slds-col slds-size_8-of-12">
+      <aura:if isTrue="{!or(sub.day=='Today',sub.day=='Tomorrow')}">
+      <div style="float:right;"><a href="{!'/lightning/r/Contact/' + sub.getTask.Id + '/view'}" style="text-decoration:none;color:black;">{!sub.day}</a></div>  
+              <aura:set attribute="else">
+                <aura:if isTrue="{!(sub.day=='Yesterday')}"> 
+                    <div style="float:right;"><a href="{!'/lightning/r/Contact/' + sub.getTask.Id + '/view'}" style="text-decoration:none;color:red;">{!sub.day}</a></div>  
+                  </aura:if>
+           <div style="float:right;"><a href="{!'/lightning/r/Contact/' + sub.getTask.Id + '/view'}" style="text-decoration:none;color:black;"><p><lightning:formattedDateTime value="{!sub.day}"/></p></a></div>
+      </aura:set>
+  </aura:if> 
+      </div>
+       
+  <div class="slds-size_12-of-12">
+      <span style="margin-left:20px;font-size:12px;color:blue;border-bottom: 1px dotted;" ><a href="{!'/lightning/r/Contact/' + sub.getTask.WhoId + '/view'}" data-attriVal="{!sub.getTask.WhoId}" id="{!sub.getTask.WhoId}" onmouseover="{!c.showpopup}" onmouseout="{!c.hidepop}" style="text-decoration:none;">{!sub.getTask.Who.Name}</a>
+      
+      </span>
+            
+        </div>
+            </aura:iteration>
+        </div>
+</div>
+         </aura:set>
+</aura:if>
+         
+<footer class="slds-card__footer">
+<a class="slds-card__footer-action" href="https://arpitpathak-dev-ed.lightning.force.com/lightning/o/Task/home">View All
+<span class="slds-assistive-text">Accounts</span>
+</a>
+</footer>
+
+    <aura:if isTrue="{!v.showModal}">
+        <c:Modal attr="{!v.showModal}" subject="{!v.subjectid}"/>
+    </aura:if>
+    <aura:if isTrue="{!v.popup}">
+       <span class="popup"> <c:Popup attr="{!v.popup}" contactId="{!v.contactId}"/></span>
+    </aura:if>
+    </article>
+</aura:component>

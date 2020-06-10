@@ -1,0 +1,26 @@
+<apex:page standardController="Account">
+    <apex:pageBlock title="Account Edit">
+        
+        <apex:form >
+            
+            <apex:commandButton action="{!save}" value="Save"/>
+            <apex:pageBlockSection title="Account Information" collapsible="true">
+                   <apex:inputfield value="{!Account.name}"/>
+         <apex:inputfield value="{!Account.rating}"/>
+       <apex:inputfield value="{!Account.phone}"/>
+          <apex:inputfield value="{!Account.annualrevenue}"/> 
+        <apex:inputfield value="{!Account.Fax}"/> 
+    </apex:pageBlockSection>
+                 <br></br>
+         <apex:pageBlockSection title="Address Information" collapsible="true">
+         <apex:inputfield value="{!Account.Billingstreet}"/>
+       <apex:inputfield value="{!Account.Billingcity}"/>
+          <apex:inputfield value="{!Account.ShippingCity}"/> 
+        <apex:inputfield value="{!Account.ShippingCountry}"/> 
+    </apex:pageBlockSection>
+<apex:pageBlockSection title="Additional Information" collapsible="true">
+    <apex:inputfield value="{!Account.description}"/>
+    </apex:pageBlockSection>
+            </apex:form>
+        </apex:pageBlock>
+</apex:page>

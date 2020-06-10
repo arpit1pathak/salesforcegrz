@@ -1,0 +1,6 @@
+<aura:component>
+    <aura:attribute name="input" type="string" />
+<div><lightning:input aura:id="enter-search" name="search-input" label="search" value = "{!v.input}"/>
+    </div>
+    <Lightning:button name = "enter" label ="enter" onclick = "{!c.onsearch}"/>
+</aura:component>

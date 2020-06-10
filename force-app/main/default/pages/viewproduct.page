@@ -1,0 +1,13 @@
+<apex:page controller="viewproduct">
+    <apex:pageBlock title="View Product">
+        <apex:pageBlockSection >
+              <apex:pageBlockTable value="{!prod}" var="pr">
+              <apex:column value="{!pr.name}"/>
+               <apex:column value="{!pr.Brand__c}"/>
+               <apex:column value="{!pr.Categories__c}"/>
+               <apex:column value="{!pr.Model_Number__c}"/>
+               <apex:column value="{!pr.Price__c}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

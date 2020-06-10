@@ -1,0 +1,32 @@
+<apex:page controller="Ctrl_ContactSearch">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Search" action="{!searchContacts}" reRender="contact-table" />
+            </apex:pageBlockButtons>
+	        <apex:pageBlockSection id="contact-table" columns="1">
+	            <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Name" />
+                    <apex:inputText value="{!name}" />
+	            </apex:pageBlockSectionItem>
+	            <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Last Name" />
+                    <apex:inputText value="{!lastname}" />
+	            </apex:pageBlockSectionItem>
+
+                <apex:pageBlockTable value="{!contacts}" var="c">
+                    <apex:column >
+                        <apex:facet name="header">
+                            {!c.Name}
+                        </apex:facet>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">
+                            {!c.MailingState}
+                        </apex:facet>
+                    </apex:column>
+                </apex:pageBlockTable>
+	        </apex:pageBlockSection>
+	    </apex:pageBlock>
+    </apex:form>
+</apex:page>
